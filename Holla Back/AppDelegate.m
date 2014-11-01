@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Chain.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // Initialize Chain
+    Chain * chain = [Chain sharedInstanceWithToken:@"08f3b259a2d06e8515a01426de687f34"];
+    
+    
+    // Sample Code
+    NSString * address = @"1A3tnautz38PZL15YWfxTeh8MtuMDhEPVB";
+    
+    [chain getAddress:address completionHandler:^(NSDictionary *dict, NSError *error) {
+        NSLog(@"data=%@ error=%@", dict, error);
+    }];
+    
     return YES;
 }
 
