@@ -14,11 +14,11 @@
 		<string>github.com:dantreiman/holla.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Holla Back/Holla Back.xcodeproj</string>
+	<string>Holla Back.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>01F653D5210985D542C935938CD540F9825F7F4E</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:dantreiman/holla.git</string>
