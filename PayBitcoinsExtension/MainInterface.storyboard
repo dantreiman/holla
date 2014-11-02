@@ -16,7 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mXw-l0-kiG" userLabel="Success View">
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXw-l0-kiG" userLabel="Success View">
+                                <rect key="frame" x="0.0" y="64" width="320" height="464"/>
                                 <connections>
                                     <segue destination="lUp-fG-PdG" kind="embed" id="ngK-By-6hf"/>
                                 </connections>
@@ -33,19 +34,19 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Requested: %@ BTC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpE-MC-yp5">
-                                <rect key="frame" x="16" y="105" width="288" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Requested: %@ BTC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpE-MC-yp5">
+                                <rect key="frame" x="16" y="105" width="288" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Balance: %@ BTC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hC9-Y5-tFU">
-                                <rect key="frame" x="16" y="155" width="288" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Balance: %@ BTC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hC9-Y5-tFU">
+                                <rect key="frame" x="16" y="155" width="288" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7h-4f-OTq">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7h-4f-OTq">
                                 <rect key="frame" x="73" y="343" width="55" height="30"/>
                                 <state key="normal" title="Confirm">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,7 +55,7 @@
                                     <action selector="confirm:" destination="ObA-dk-sSI" eventType="touchUpInside" id="nzC-7o-Sgq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orT-0f-o0y">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orT-0f-o0y">
                                 <rect key="frame" x="186" y="343" width="48" height="30"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,8 +64,8 @@
                                     <action selector="done" destination="ObA-dk-sSI" eventType="touchUpInside" id="Odz-zZ-FjF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXD-VY-WzH">
-                                <rect key="frame" x="16" y="184" width="288" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXD-VY-WzH">
+                                <rect key="frame" x="16" y="184" width="288" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -72,9 +73,26 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="mXw-l0-kiG" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="4OR-DK-SEf"/>
+                            <constraint firstAttribute="trailing" secondItem="dpE-MC-yp5" secondAttribute="trailing" constant="16" id="9xQ-0s-haS"/>
                             <constraint firstAttribute="trailing" secondItem="NOA-Dm-cuz" secondAttribute="trailing" id="A05-Pj-hrr"/>
+                            <constraint firstAttribute="bottom" secondItem="orT-0f-o0y" secondAttribute="bottom" constant="155" id="FRo-wa-1aQ"/>
                             <constraint firstItem="NOA-Dm-cuz" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="HxO-8t-aoh"/>
+                            <constraint firstItem="t7h-4f-OTq" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" constant="73" id="Jpl-z3-37F"/>
+                            <constraint firstAttribute="trailing" secondItem="hC9-Y5-tFU" secondAttribute="trailing" constant="16" id="MiJ-q7-9Ho"/>
+                            <constraint firstItem="dpE-MC-yp5" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" constant="105" id="Sjq-St-gcx"/>
+                            <constraint firstAttribute="trailing" secondItem="orT-0f-o0y" secondAttribute="trailing" constant="86" id="WX9-A8-WoF"/>
+                            <constraint firstItem="hC9-Y5-tFU" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" constant="16" id="bEr-dO-MJZ"/>
+                            <constraint firstAttribute="bottom" secondItem="mXw-l0-kiG" secondAttribute="bottom" id="eVX-yX-bSq"/>
+                            <constraint firstAttribute="trailing" secondItem="kXD-VY-WzH" secondAttribute="trailing" constant="16" id="qqU-MP-ObJ"/>
+                            <constraint firstItem="mXw-l0-kiG" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" constant="64" id="sXd-fr-vUu"/>
+                            <constraint firstItem="dpE-MC-yp5" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" constant="16" id="tQU-Yo-jd3"/>
+                            <constraint firstItem="hC9-Y5-tFU" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" constant="155" id="tlB-nZ-ZDQ"/>
+                            <constraint firstAttribute="bottom" secondItem="t7h-4f-OTq" secondAttribute="bottom" constant="155" id="u7m-WK-Eps"/>
+                            <constraint firstAttribute="trailing" secondItem="mXw-l0-kiG" secondAttribute="trailing" id="ubW-gD-5Cp"/>
                             <constraint firstItem="NOA-Dm-cuz" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" id="we0-1t-bgp"/>
+                            <constraint firstItem="kXD-VY-WzH" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" constant="16" id="xmC-sr-TXY"/>
+                            <constraint firstItem="kXD-VY-WzH" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" constant="184" id="yhs-9I-YPQ"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -102,6 +120,7 @@
                         <viewControllerLayoutGuide type="bottom" id="74G-Qg-CRK"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fRs-Js-8cI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="464"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Payment Succeeded!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dc3-XN-OJ6">

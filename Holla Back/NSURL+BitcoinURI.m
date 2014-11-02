@@ -62,9 +62,9 @@
 }
 
 
-- (NSString *) bitcoinAmount
+- (NSDecimalNumber *) bitcoinAmount
 {
-    return self.queryParameters[@"amount"];
+    return [NSDecimalNumber decimalNumberWithString:self.queryParameters[@"amount"]];
 }
 
 

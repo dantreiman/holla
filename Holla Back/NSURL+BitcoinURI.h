@@ -19,7 +19,7 @@
 
 
 @property (readonly) NSString * bitcoinAddress;
-@property (readonly) NSString * bitcoinAmount;
+@property (readonly) NSDecimalNumber * bitcoinAmount;
 @property (readonly) NSString * bitcoinMessage;
 
 

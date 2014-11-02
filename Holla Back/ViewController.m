@@ -20,7 +20,9 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+
+- (void) viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
@@ -52,6 +54,25 @@
 }
 
 
+
+#pragma mark - Actions
+
+
+- (IBAction) share:(UIButton *)sender
+{
+    // For testing, bring up UIActionSheet with the image
+    NSArray * items = @[self.imageView.image];
+    UIActivityViewController * controller = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
+    controller.completionWithItemsHandler = ^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError) {
+    };
+    if ([controller respondsToSelector:@selector(popoverPresentationController)] && controller.popoverPresentationController) {
+        controller.popoverPresentationController.sourceView = sender;
+        controller.popoverPresentationController.sourceRect = CGRectZero;
+        controller.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionDown | UIPopoverArrowDirectionUp;
+    }
+    
+    [self presentViewController:controller animated:YES completion:NULL];
+}
 
 
 @end

@@ -22,9 +22,27 @@
 @property (weak, nonatomic) IBOutlet UIButton * confirmButton;
 @property (weak, nonatomic) IBOutlet UIButton * cancelButton;
 
+@property (strong, nonatomic) NSDecimalNumber * amount;
+@property (strong, nonatomic) Wallet * wallet;
+@property (strong, nonatomic) NSString * receivingAddress;
+
 @end
 
+
 @implementation ActionViewController
+
+
+- (UIFont *) boldFont
+{
+    return [UIFont boldSystemFontOfSize:17];
+}
+
+
+- (UIFont *) regularFont
+{
+    return [UIFont systemFontOfSize:17];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,6 +59,7 @@
                 [itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeImage options:nil completionHandler:^(UIImage *image, NSError *error) {
                     if(image) {
                         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                            [self loadWallet];
                             [self loadImage:image];
                         }];
                     }
@@ -66,13 +85,19 @@
     if (code) {
         NSString * urlString = [[NSString alloc] initWithData:code encoding:NSUTF8StringEncoding];
         NSURL * url = [NSURL URLWithString:urlString];
-        NSString * address = url.bitcoinAddress;
-        NSString * amount = url.bitcoinAmount;
+        self.receivingAddress = url.bitcoinAddress;
+        self.amount = url.bitcoinAmount;
         NSString * message = url.bitcoinMessage;
         
-        self.requestedLabel.text = [NSString stringWithFormat:@"Requested: %@ BTC", amount];
+        NSDictionary * boldAttrs = @{ NSFontAttributeName: self.boldFont };
+        NSDictionary * regularAttrs = @{ NSFontAttributeName: self.regularFont };
+        NSMutableAttributedString * requestText = [[NSMutableAttributedString alloc] initWithString:@"Requested: " attributes:regularAttrs];
+        
+        [requestText appendAttributedString:[[NSAttributedString alloc] initWithString:self.amount.stringValue attributes:boldAttrs]];
+        [requestText appendAttributedString:[[NSAttributedString alloc] initWithString:@" BTC" attributes:regularAttrs]];
+
+        self.requestedLabel.attributedText = requestText;
         self.messageLabel.text = message ? message : @"";
-        [self loadWallet];
     }
     else {
         // Warn user no sender information detected
@@ -83,11 +108,40 @@
 - (void) loadWallet
 {
     self.balanceLabel.text = @"";
+    __weak ActionViewController * weakSelf = self;
     [Wallet fetchOrCreateWallet:^(Wallet * wallet)
      {
-         
+         weakSelf.wallet = wallet;
+         [wallet fetchAddresses:^(NSString * address) {
+             [weakSelf displayBalance];
+         } failure:^{}];
      } failure:^{}];
 }
+
+
+- (void) displayBalance
+{
+    Wallet * wallet = self.wallet;
+    NSDecimalNumber * balance = wallet.balance ? wallet.balance : [NSDecimalNumber zero];
+    BOOL balanceSufficient = [balance compare:self.amount] == NSOrderedDescending;
+    
+    NSDictionary * boldAttrs = @{ NSFontAttributeName: self.boldFont };
+    NSDictionary * regularAttrs = @{ NSFontAttributeName: self.regularFont };
+    NSDictionary * redAttrs = @{ NSFontAttributeName: self.boldFont, NSForegroundColorAttributeName: [UIColor redColor] };
+
+    NSMutableAttributedString * balanceText = [[NSMutableAttributedString alloc] initWithString:@"Current Balance: " attributes:regularAttrs];
+    [balanceText appendAttributedString:[[NSAttributedString alloc] initWithString:balance.stringValue attributes:balanceSufficient ? boldAttrs : redAttrs]];
+    [balanceText appendAttributedString:[[NSAttributedString alloc] initWithString:@" BTC" attributes:regularAttrs]];
+    self.balanceLabel.attributedText = balanceText;
+    
+    if (!balanceSufficient) {
+        self.messageLabel.text = @"Insufficient Balance.";
+    }
+    else {
+        self.confirmButton.enabled = YES;
+    }
+}
+
 
 
 - (void)didReceiveMemoryWarning {
@@ -109,8 +163,20 @@
 - (IBAction) confirm:(id)sender {
     // Do Transaction
     //...
-    
-    // Show feedback
+    [self.wallet sendPayment:self.receivingAddress
+                      amount:[self.amount convertBTCToSatoshi]
+                     success:^(NSString * message) {
+                         [self paymentSucceeded];
+                     }
+                     failure:^ {
+                         
+                     }];
+}
+
+
+- (void) paymentSucceeded
+{
+        // Show feedback
     [self.view exchangeSubviewAtIndex:0 withSubviewAtIndex:self.view.subviews.count - 1];
     [UIView animateWithDuration:1.0 animations:^{
         self.successView.alpha = 1.0;
