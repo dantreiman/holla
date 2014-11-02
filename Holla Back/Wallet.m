@@ -8,6 +8,7 @@
 
 #import "Wallet.h"
 #import "AFHTTPRequestOperationManager.h"
+#import "Keychain.h"
 
 #define kBlockchainBaseURL @"https://blockchain.info/"
 #define kBlockchainCreateWalletPath @"api/v2/create_wallet"
@@ -34,8 +35,9 @@
 
 + (void)fetchOrCreateWallet:(void (^)(Wallet *))success failure:(void (^)(void))failure {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    Keychain *keychain = [Keychain sharedKeychain];
     NSString *walletGUID = [defaults stringForKey:kWalletGUIDDefaultKey];
-    NSString *password = [defaults stringForKey:kWalletPasswordDefaultKey];
+    NSString *password = [keychain retrievePasswordForAccount:kWalletPasswordDefaultKey];
     
     if (walletGUID != nil) {
         success([[Wallet alloc] initWithGUID:walletGUID andPassword:password]);
@@ -44,8 +46,7 @@
     NSString *walletUrl = [NSString stringWithFormat:@"%@%@",
                            kBlockchainBaseURL, kBlockchainCreateWalletPath];
     password = [self generateRandomPassword:25];
-    [defaults setValue:password forKey:kWalletPasswordDefaultKey];
-    [defaults synchronize];
+    [keychain storePassword:password forAccount:kWalletPasswordDefaultKey];
     NSDictionary *params = @{@"password": password,
                              @"api_code": kBlockchainAPICode};
     
