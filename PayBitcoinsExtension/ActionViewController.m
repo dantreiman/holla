@@ -123,7 +123,6 @@
 {
     Wallet * wallet = self.wallet;
     NSDecimalNumber * balance = wallet.balance ? wallet.balance : [NSDecimalNumber zero];
-    balance = [NSDecimalNumber decimalNumberWithString:@"3.0"];
     BOOL balanceSufficient = [balance compare:self.amount] == NSOrderedDescending;
     
     NSDictionary * boldAttrs = @{ NSFontAttributeName: self.boldFont };
