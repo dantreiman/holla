@@ -17,6 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UISlider * amountSlider;
 @property (weak, nonatomic) IBOutlet UIButton * requestButton;
+@property (weak, nonatomic) IBOutlet UILabel * requestLabel;
 
 @property (strong, nonatomic) Wallet *wallet;
 
@@ -89,9 +90,7 @@
     double BTC = [self BTCAmount];
     double USD = BTC * 350.0; // Approximation
     NSString * title = [NSString stringWithFormat:@"Request %.3f BTC (%.2f USD)", BTC, USD];
-    [UIView performWithoutAnimation:^{
-        [self.requestButton setTitle:title forState:UIControlStateNormal];
-    }];
+    self.requestLabel.text = title;
 }
 
 
