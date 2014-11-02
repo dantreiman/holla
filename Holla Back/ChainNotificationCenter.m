@@ -65,8 +65,8 @@
 }
 
 - (void)webSocketDidOpen:(SRWebSocket *)webSocket {
-//    NSDictionary *params = @{@"type": @"address", @"address": self.address, @"block_chain": @"bitcoin"};
-    NSDictionary *params = @{@"type": @"new-transaction", @"block_chain": @"bitcoin"};
+    NSDictionary *params = @{@"type": @"address", @"address": self.address, @"block_chain": @"bitcoin"};
+//    NSDictionary *params = @{@"type": @"new-transaction", @"block_chain": @"bitcoin"};
     NSString *jsonString = [self jsonStringFromDictionary:params];
     [webSocket send:jsonString];
 }
