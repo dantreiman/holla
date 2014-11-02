@@ -123,6 +123,7 @@
 {
     Wallet * wallet = self.wallet;
     NSDecimalNumber * balance = wallet.balance ? wallet.balance : [NSDecimalNumber zero];
+    balance = [NSDecimalNumber decimalNumberWithString:@"3.0"];
     BOOL balanceSufficient = [balance compare:self.amount] == NSOrderedDescending;
     
     NSDictionary * boldAttrs = @{ NSFontAttributeName: self.boldFont };
@@ -136,6 +137,9 @@
     
     if (!balanceSufficient) {
         self.messageLabel.text = @"Insufficient Balance.";
+    }
+    else {
+        self.confirmButton.enabled = YES;
     }
 }
 
@@ -160,12 +164,14 @@
 - (IBAction) confirm:(id)sender {
     // Do Transaction
     //...
-//    [self.wallet sendPayment:self.receivingAddress
-//                      amount:[[NSDecimalNumber decimalNumberWithString:self.amount] convertBTCToSatoshi]
-//                     success:<#^(NSString *)success#>
-//                              failure:<#^(void)failure#>]
-    
-    
+    [self.wallet sendPayment:self.receivingAddress
+                      amount:[self.amount convertBTCToSatoshi]
+                     success:^(NSString * message) {
+                         [self paymentSucceeded];
+                     }
+                     failure:^ {
+                         
+                     }];
 }
 
 
