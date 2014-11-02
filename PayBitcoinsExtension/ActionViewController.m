@@ -8,10 +8,14 @@
 
 #import "ActionViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
+#import "UIImage+QRCodes.h"
 
 @interface ActionViewController ()
 
-@property(strong,nonatomic) IBOutlet UIImageView *imageView;
+@property (weak ,nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIView * successView;
+@property (weak, nonatomic) IBOutlet UIButton * confirmButton;
+@property (weak, nonatomic) IBOutlet UIButton * cancelButton;
 
 @end
 
@@ -29,11 +33,10 @@
         for (NSItemProvider *itemProvider in item.attachments) {
             if ([itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeImage]) {
                 // This is an image. We'll load it, then place it in our image view.
-                __weak UIImageView *imageView = self.imageView;
                 [itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeImage options:nil completionHandler:^(UIImage *image, NSError *error) {
                     if(image) {
                         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                            [imageView setImage:image];
+                            [self loadImage:image];
                         }];
                     }
                 }];
@@ -50,15 +53,40 @@
     }
 }
 
+
+- (void) loadImage:(UIImage *)image
+{
+    [self.imageView setImage:image];
+    
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)done {
+
+#pragma mark - Actions
+
+
+- (IBAction) done {
     // Return any edited content to the host app.
     // This template doesn't do anything, so we just echo the passed in items.
     [self.extensionContext completeRequestReturningItems:self.extensionContext.inputItems completionHandler:nil];
 }
+
+
+- (IBAction) confirm:(id)sender {
+    // Do Transaction
+    //...
+    
+    // Show feedback
+    [self.view exchangeSubviewAtIndex:0 withSubviewAtIndex:self.view.subviews.count - 1];
+    [UIView animateWithDuration:1.0 animations:^{
+        self.successView.alpha = 1.0;
+    }];
+}
+
 
 @end
