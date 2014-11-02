@@ -15,6 +15,9 @@
 
 @interface AppDelegate ()
 
+@property (nonatomic, strong) NSTimer * backgroundTimer;
+@property (nonatomic) UIBackgroundTaskIdentifier backgroundTask;
+
 @end
 
 @implementation AppDelegate
@@ -76,11 +79,39 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    NSLog(@"Application entered background state.");
+    NSAssert(self.backgroundTask == UIBackgroundTaskInvalid, nil);
+    
+    self.backgroundTask = [application beginBackgroundTaskWithExpirationHandler: ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"Background task expired");
+            if (self.backgroundTimer)
+            {
+                [self.backgroundTimer invalidate];
+                self.backgroundTimer = nil;
+            }
+            [application endBackgroundTask:self.backgroundTask];
+            self.backgroundTask = UIBackgroundTaskInvalid;
+        });
+    }];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.backgroundTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(timerUpdate:) userInfo:nil repeats:YES];
+    });
 }
 
+
+- (void) timerUpdate:(NSTimer *) timer
+{
+    UIApplication * application = [UIApplication sharedApplication];
+    NSLog(@"Timer update, background time left: %f", application.backgroundTimeRemaining);
+}
+
+
 - (void)applicationWillEnterForeground:(UIApplication *)application {
+    [self.backgroundTimer invalidate];
+    self.backgroundTimer = nil;
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
