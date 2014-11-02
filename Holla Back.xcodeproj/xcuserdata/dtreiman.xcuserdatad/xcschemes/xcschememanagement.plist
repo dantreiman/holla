@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BitcoinKeyboard.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Holla Back.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>D7738E4B1A05ADE9002685EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D79833891A05A11300810CE4</key>
 		<dict>
 			<key>primary</key>
