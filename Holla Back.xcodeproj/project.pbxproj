@@ -21,6 +21,8 @@
 		D7738E6C1A05CAF4002685EE /* UIImage+QRCodes.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E611A05C3BC002685EE /* UIImage+QRCodes.m */; };
 		D7738E701A05CF6C002685EE /* Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E6F1A05CF6C002685EE /* Keychain.m */; };
 		D7738E711A05CF6C002685EE /* Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E6F1A05CF6C002685EE /* Keychain.m */; };
+		D7738E731A05D391002685EE /* libPods-ZBarSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7738E721A05D391002685EE /* libPods-ZBarSDK.a */; };
+		D7738E751A05D3A5002685EE /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D7738E741A05D3A5002685EE /* libiconv.dylib */; };
 		D79833901A05A11300810CE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D798338F1A05A11300810CE4 /* main.m */; };
 		D79833931A05A11300810CE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D79833921A05A11300810CE4 /* AppDelegate.m */; };
 		D79833961A05A11300810CE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D79833951A05A11300810CE4 /* ViewController.m */; };
@@ -73,6 +75,8 @@
 		D7738E681A05C5DE002685EE /* NSURL+BitcoinURI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+BitcoinURI.m"; sourceTree = "<group>"; };
 		D7738E6E1A05CF6C002685EE /* Keychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Keychain.h; sourceTree = "<group>"; };
 		D7738E6F1A05CF6C002685EE /* Keychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Keychain.m; sourceTree = "<group>"; };
+		D7738E721A05D391002685EE /* libPods-ZBarSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ZBarSDK.a"; path = "Pods/build/Debug-iphoneos/libPods-ZBarSDK.a"; sourceTree = "<group>"; };
+		D7738E741A05D3A5002685EE /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 		D798338A1A05A11300810CE4 /* Holla Back.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holla Back.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D798338E1A05A11300810CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D798338F1A05A11300810CE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7738E751A05D3A5002685EE /* libiconv.dylib in Frameworks */,
+				D7738E731A05D391002685EE /* libPods-ZBarSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +123,8 @@
 		48EEA368738F408A98F43BDA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7738E741A05D3A5002685EE /* libiconv.dylib */,
+				D7738E721A05D391002685EE /* libPods-ZBarSDK.a */,
 				DD3EDA6CC31C49DBB5606B87 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -414,6 +422,10 @@
 				);
 				INFOPLIST_FILE = BitcoinKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -430,6 +442,10 @@
 				);
 				INFOPLIST_FILE = BitcoinKeyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

@@ -41,7 +41,22 @@
 
 - (NSData *) codeExtractedFromImage
 {
-    return nil;
+    ZBarImageScanner * scanner = [[ZBarImageScanner alloc] init];
+    [scanner setSymbology: 0
+                   config: ZBAR_CFG_X_DENSITY
+                       to: 2];
+    [scanner setSymbology: 0
+                   config: ZBAR_CFG_Y_DENSITY
+                       to: 2];
+    ZBarImage * image = [[ZBarImage alloc] initWithCGImage:self.CGImage];
+    NSInteger status = [scanner scanImage:image];
+    ZBarSymbolSet * symbols = scanner.results;
+    NSData * data = nil;
+    for (ZBarSymbol * symbol in symbols) {
+        NSString * string = symbol.data;
+        data = [string dataUsingEncoding:NSUTF8StringEncoding];
+    }
+    return data;
 }
 
 
