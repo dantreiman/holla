@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+
+@class Wallet;
+
+
 @interface ViewController : UIViewController
 
+- (void) walletLoaded:(Wallet *)wallet;
 
 @end
 

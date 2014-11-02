@@ -24,23 +24,17 @@
 @implementation ViewController
 
 
+- (void) walletLoaded:(Wallet *)wallet
+{
+    self.wallet = wallet;
+    [self generateQRCode];
+}
+
+
 - (void) viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    __weak ViewController * weakSelf = self;
-    [Wallet fetchOrCreateWallet:^(Wallet * wallet) {
-        weakSelf.wallet = wallet;
-        [wallet fetchAddresses:^(NSString * address) {
-            NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
-            [userDefaults setObject:address forKey:@"Address"];
-            [self generateQRCode];
-        } failure:^{}];
-        
-    } failure:^{
-        
-    }];
+    // Do any additional setup after loading the view, typically from a nib.    
 }
 
 
