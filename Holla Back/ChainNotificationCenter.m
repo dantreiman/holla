@@ -9,6 +9,8 @@
 #import "ChainNotificationCenter.h"
 #import "NSDecimalNumber+Bitcoin.h"
 @import UIKit;
+@import AVFoundation;
+
 
 @interface ChainNotificationCenter ()
 
@@ -35,6 +37,7 @@
         NSURL *url = [NSURL URLWithString:@"wss://ws.chain.com/v2/notifications"];
         self.socket = [[SRWebSocket alloc] initWithURL:url];
         self.socket.delegate = self;
+        [self.socket setDelegateDispatchQueue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)];
     }
     
     return self;
@@ -97,5 +100,18 @@
     }
 
 }
+
+
+- (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean
+{
+    NSLog(@"Socket closed with code %d, %@", code, reason);
+}
+
+
+- (void) webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error
+{
+    NSLog(@"Socket failed %@", error.debugDescription);
+}
+
 
 @end
