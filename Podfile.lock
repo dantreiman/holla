@@ -21,26 +21,16 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Chain (2.0.0)
-  - CoreBitcoin (0.4.0):
-    - OpenSSL-Universal (= 1.0.1.h)
-  - OpenSSL-Universal (1.0.1.h)
   - SocketRocket (0.3.1-beta2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - Chain (= 2.0.0)
-  - CoreBitcoin (from `https://raw.github.com/oleganza/CoreBitcoin/master/CoreBitcoin.podspec`)
   - SocketRocket
-
-EXTERNAL SOURCES:
-  CoreBitcoin:
-    :podspec: https://raw.github.com/oleganza/CoreBitcoin/master/CoreBitcoin.podspec
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
   Chain: d0e543986b88e36e46fc14088cd1ad48bb053f91
-  CoreBitcoin: 0957e9fa7a31867b91f459f943bd9144d397b624
-  OpenSSL-Universal: 9c112508615ed33bb35f730eed820e93175a9dec
   SocketRocket: 79a68ae186063c65e1fe6f638b1ae2927aa5f304
 
 COCOAPODS: 0.34.4

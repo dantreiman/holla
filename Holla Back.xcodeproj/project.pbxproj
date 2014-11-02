@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		143A3841CCBA40D99A37D36E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3EDA6CC31C49DBB5606B87 /* libPods.a */; };
-		B987A4BE1A05AE790019E704 /* Blockchain.m in Sources */ = {isa = PBXBuildFile; fileRef = B987A4BD1A05AE790019E704 /* Blockchain.m */; };
+		B987A4C11A05B4770019E704 /* Wallet.m in Sources */ = {isa = PBXBuildFile; fileRef = B987A4C01A05B4770019E704 /* Wallet.m */; };
 		D7738E461A05AADA002685EE /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E451A05AAD9002685EE /* NotificationManager.m */; };
 		D79833901A05A11300810CE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D798338F1A05A11300810CE4 /* main.m */; };
 		D79833931A05A11300810CE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D79833921A05A11300810CE4 /* AppDelegate.m */; };
@@ -19,8 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B987A4BC1A05AE790019E704 /* Blockchain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blockchain.h; sourceTree = "<group>"; };
-		B987A4BD1A05AE790019E704 /* Blockchain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Blockchain.m; sourceTree = "<group>"; };
+		B987A4BF1A05B4770019E704 /* Wallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wallet.h; sourceTree = "<group>"; };
+		B987A4C01A05B4770019E704 /* Wallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wallet.m; sourceTree = "<group>"; };
 		C09DDCB69FE863F0BFE17A61 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C9021190C8A429D50BA9CF3C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D7738E441A05AAD9002685EE /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationManager.h; sourceTree = "<group>"; };
@@ -88,8 +88,6 @@
 		D798338C1A05A11300810CE4 /* Holla Back */ = {
 			isa = PBXGroup;
 			children = (
-				B987A4BC1A05AE790019E704 /* Blockchain.h */,
-				B987A4BD1A05AE790019E704 /* Blockchain.m */,
 				D79833911A05A11300810CE4 /* AppDelegate.h */,
 				D79833921A05A11300810CE4 /* AppDelegate.m */,
 				D79833941A05A11300810CE4 /* ViewController.h */,
@@ -100,6 +98,8 @@
 				D798339A1A05A11300810CE4 /* Images.xcassets */,
 				D798339C1A05A11300810CE4 /* LaunchScreen.xib */,
 				D798338D1A05A11300810CE4 /* Supporting Files */,
+				B987A4BF1A05B4770019E704 /* Wallet.h */,
+				B987A4C01A05B4770019E704 /* Wallet.m */,
 			);
 			path = "Holla Back";
 			sourceTree = "<group>";
@@ -223,8 +223,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B987A4BE1A05AE790019E704 /* Blockchain.m in Sources */,
 				D79833961A05A11300810CE4 /* ViewController.m in Sources */,
+				B987A4C11A05B4770019E704 /* Wallet.m in Sources */,
 				D79833931A05A11300810CE4 /* AppDelegate.m in Sources */,
 				D7738E461A05AADA002685EE /* NotificationManager.m in Sources */,
 				D79833901A05A11300810CE4 /* main.m in Sources */,

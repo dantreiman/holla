@@ -3,4 +3,3 @@ platform :ios, '8.0'
 pod 'Chain', '2.0.0'
 pod "AFNetworking", "~> 2.0"
 pod "SocketRocket"
-pod 'CoreBitcoin', :podspec => 'https://raw.github.com/oleganza/CoreBitcoin/master/CoreBitcoin.podspec'
