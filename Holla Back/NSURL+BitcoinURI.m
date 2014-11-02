@@ -39,8 +39,9 @@
 // will appear in the dictionary.
 - (NSDictionary *) queryParameters
 {
+    NSString * query = [[self.absoluteString componentsSeparatedByString:@"?"] lastObject];
     NSMutableDictionary * dictionary = [NSMutableDictionary dictionary];
-    NSArray * queryPairs = [self.query componentsSeparatedByString:@"&"];
+    NSArray * queryPairs = [query componentsSeparatedByString:@"&"];
     for (NSString * key in queryPairs) {
         NSArray * pair = [key componentsSeparatedByString:@"="];
         if (pair.count == 2) {
@@ -53,7 +54,11 @@
 
 - (NSString *) bitcoinAddress
 {
-    return self.path;
+    NSScanner * scanner = [NSScanner scannerWithString:self.absoluteString];
+    [scanner scanString:@"bitcoin:" intoString:NULL];
+    NSString * result = nil;
+    [scanner scanUpToString:@"?" intoString:&result];
+    return result;
 }
 
 

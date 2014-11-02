@@ -17,4 +17,10 @@
  */
 + (NSURL *) URLWithBitcoinAddress:(NSString *)address amount:(NSString *)amount message:(NSString *)message;
 
+
+@property (readonly) NSString * bitcoinAddress;
+@property (readonly) NSString * bitcoinAmount;
+@property (readonly) NSString * bitcoinMessage;
+
+
 @end

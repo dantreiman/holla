@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "NSURL+BitcoinURI.h"
 #import "UIImage+QRCodes.h"
-
+#import "NSURL+BitcoinURI.h"
 
 @interface ViewController ()
 
@@ -36,7 +36,13 @@
     
     // Decode QR Code image
     NSData * result = [qrCode codeExtractedFromImage];
-    NSLog(@"%@", result);
+    NSString * urlString = [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
+    NSURL * testURL = [NSURL URLWithString:urlString];
+    NSString * testAddress = testURL.bitcoinAddress;
+    NSString * testAmount = testURL.bitcoinAmount;
+    NSString * testMessage = testURL.bitcoinMessage;
+
+    NSLog(@"%@, %@, %@", testAddress, testAmount, testMessage);
 }
 
 

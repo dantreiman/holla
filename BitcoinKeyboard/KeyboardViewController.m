@@ -99,8 +99,12 @@
 
 - (IBAction) requestPayment:(id)sender
 {
+    NSString * address = [[NSUserDefaults standardUserDefaults] stringForKey:@"Address"];
     // NSString * address = self.wallet.address;
-    NSString * address = @"ADDRESS";
+    if (!address) {
+#warning Replace this with fallback address for demo
+        address = @"ADDRESS";
+    }
     NSString * amount = [NSString stringWithFormat:@"%.3f", [self BTCAmount]];
     NSURL * url = [NSURL URLWithBitcoinAddress:address amount:amount message:nil];
     UIImage * qrCode = [UIImage imageWithCode:[url.absoluteString dataUsingEncoding:NSUTF8StringEncoding]];

@@ -9,11 +9,16 @@
 #import "ActionViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "UIImage+QRCodes.h"
+#import "NSURL+BitcoinURI.h"
+#import "Wallet.h"
 
 @interface ActionViewController ()
 
 @property (weak ,nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIView * successView;
+@property (weak, nonatomic) IBOutlet UILabel * requestedLabel;
+@property (weak, nonatomic) IBOutlet UILabel * balanceLabel;
+@property (weak, nonatomic) IBOutlet UILabel * messageLabel;
 @property (weak, nonatomic) IBOutlet UIButton * confirmButton;
 @property (weak, nonatomic) IBOutlet UIButton * cancelButton;
 
@@ -57,7 +62,31 @@
 - (void) loadImage:(UIImage *)image
 {
     [self.imageView setImage:image];
-    
+    NSData * code = [image codeExtractedFromImage];
+    if (code) {
+        NSString * urlString = [[NSString alloc] initWithData:code encoding:NSUTF8StringEncoding];
+        NSURL * url = [NSURL URLWithString:urlString];
+        NSString * address = url.bitcoinAddress;
+        NSString * amount = url.bitcoinAmount;
+        NSString * message = url.bitcoinMessage;
+        
+        self.requestedLabel.text = [NSString stringWithFormat:@"Requested: %@ BTC", amount];
+        self.messageLabel.text = message ? message : @"";
+        [self loadWallet];
+    }
+    else {
+        // Warn user no sender information detected
+    }
+}
+
+
+- (void) loadWallet
+{
+    self.balanceLabel.text = @"";
+    [Wallet fetchOrCreateWallet:^(Wallet * wallet)
+     {
+         
+     } failure:^{}];
 }
 
 

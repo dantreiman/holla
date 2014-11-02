@@ -27,6 +27,14 @@
 		D7738E821A05D78F002685EE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7738E811A05D78F002685EE /* MainInterface.storyboard */; };
 		D7738E851A05D78F002685EE /* PayBitcoinsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D7738E7A1A05D78F002685EE /* PayBitcoinsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D7738E8A1A05D79D002685EE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7738E891A05D79D002685EE /* libPods.a */; };
+		D7738E8B1A05EDF6002685EE /* NSURL+BitcoinURI.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E681A05C5DE002685EE /* NSURL+BitcoinURI.m */; };
+		D7738E8C1A05EDFD002685EE /* UIImage+QRCodes.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E611A05C3BC002685EE /* UIImage+QRCodes.m */; };
+		D7738E8D1A05EDFF002685EE /* UIImage+ResizedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E641A05C44A002685EE /* UIImage+ResizedImage.m */; };
+		D7738E8F1A05EE6B002685EE /* libPods-ZBarSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7738E8E1A05EE6B002685EE /* libPods-ZBarSDK.a */; };
+		D7738E901A05EE73002685EE /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D7738E741A05D3A5002685EE /* libiconv.dylib */; };
+		D7738E911A05F147002685EE /* Wallet.m in Sources */ = {isa = PBXBuildFile; fileRef = B987A4C61A05D05A0019E704 /* Wallet.m */; };
+		D7738E921A05F152002685EE /* Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E6F1A05CF6C002685EE /* Keychain.m */; };
+		D7738E941A05F18B002685EE /* libPods-AFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7738E931A05F18B002685EE /* libPods-AFNetworking.a */; };
 		D79833901A05A11300810CE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D798338F1A05A11300810CE4 /* main.m */; };
 		D79833931A05A11300810CE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D79833921A05A11300810CE4 /* AppDelegate.m */; };
 		D79833961A05A11300810CE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D79833951A05A11300810CE4 /* ViewController.m */; };
@@ -95,6 +103,8 @@
 		D7738E7F1A05D78F002685EE /* ActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionViewController.m; sourceTree = "<group>"; };
 		D7738E811A05D78F002685EE /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		D7738E891A05D79D002685EE /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		D7738E8E1A05EE6B002685EE /* libPods-ZBarSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ZBarSDK.a"; path = "Pods/build/Debug-iphoneos/libPods-ZBarSDK.a"; sourceTree = "<group>"; };
+		D7738E931A05F18B002685EE /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
 		D798338A1A05A11300810CE4 /* Holla Back.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holla Back.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D798338E1A05A11300810CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D798338F1A05A11300810CE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -122,6 +132,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7738E941A05F18B002685EE /* libPods-AFNetworking.a in Frameworks */,
+				D7738E901A05EE73002685EE /* libiconv.dylib in Frameworks */,
+				D7738E8F1A05EE6B002685EE /* libPods-ZBarSDK.a in Frameworks */,
 				D7738E8A1A05D79D002685EE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +162,8 @@
 		48EEA368738F408A98F43BDA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7738E931A05F18B002685EE /* libPods-AFNetworking.a */,
+				D7738E8E1A05EE6B002685EE /* libPods-ZBarSDK.a */,
 				D7738E891A05D79D002685EE /* libPods.a */,
 				D7738E741A05D3A5002685EE /* libiconv.dylib */,
 				D7738E721A05D391002685EE /* libPods-ZBarSDK.a */,
@@ -444,6 +459,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7738E911A05F147002685EE /* Wallet.m in Sources */,
+				D7738E8C1A05EDFD002685EE /* UIImage+QRCodes.m in Sources */,
+				D7738E8B1A05EDF6002685EE /* NSURL+BitcoinURI.m in Sources */,
+				D7738E921A05F152002685EE /* Keychain.m in Sources */,
+				D7738E8D1A05EDFF002685EE /* UIImage+ResizedImage.m in Sources */,
 				D7738E801A05D78F002685EE /* ActionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,12 +570,19 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Headers/Public/ZBarSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+				);
 				INFOPLIST_FILE = PayBitcoinsExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -564,12 +591,19 @@
 		D7738E871A05D78F002685EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Headers/Public/ZBarSDK\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+				);
 				INFOPLIST_FILE = PayBitcoinsExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};

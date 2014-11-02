@@ -37,6 +37,8 @@
         
         [wallet fetchAddresses:^(NSString * address) {
             NSLog(@"Address = %@", address);
+            NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+            [userDefaults setObject:address forKey:@"Address"];
         } failure:^{}];
         
     } failure:^{

@@ -13,6 +13,8 @@
 @property (nonatomic, strong) NSString *guid;
 @property (nonatomic, strong) NSString *password;
 @property (nonatomic, strong) NSString *address;
+@property (nonatomic, strong) NSString *balance;
+
 
 - (instancetype)initWithGUID:(NSString *)guid andPassword:(NSString *)password;
 - (void)generateAddress:(void (^)(NSString * address))success failure:(void (^)(void))failure;
