@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		143A3841CCBA40D99A37D36E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3EDA6CC31C49DBB5606B87 /* libPods.a */; };
-		B987A4BE1A05AE790019E704 /* Blockchain.m in Sources */ = {isa = PBXBuildFile; fileRef = B987A4BD1A05AE790019E704 /* Blockchain.m */; };
+		B987A4C71A05D05A0019E704 /* Wallet.m in Sources */ = {isa = PBXBuildFile; fileRef = B987A4C61A05D05A0019E704 /* Wallet.m */; };
 		D7738E461A05AADA002685EE /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E451A05AAD9002685EE /* NotificationManager.m */; };
 		D7738E521A05ADE9002685EE /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E511A05ADE9002685EE /* KeyboardViewController.m */; };
 		D7738E551A05ADE9002685EE /* BitcoinKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D7738E4C1A05ADE9002685EE /* BitcoinKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -54,8 +54,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B987A4BC1A05AE790019E704 /* Blockchain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blockchain.h; sourceTree = "<group>"; };
-		B987A4BD1A05AE790019E704 /* Blockchain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Blockchain.m; sourceTree = "<group>"; };
+		B987A4C51A05D05A0019E704 /* Wallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wallet.h; sourceTree = "<group>"; };
+		B987A4C61A05D05A0019E704 /* Wallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wallet.m; sourceTree = "<group>"; };
 		C09DDCB69FE863F0BFE17A61 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C9021190C8A429D50BA9CF3C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D7738E441A05AAD9002685EE /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationManager.h; sourceTree = "<group>"; };
@@ -175,8 +175,8 @@
 		D798338C1A05A11300810CE4 /* Holla Back */ = {
 			isa = PBXGroup;
 			children = (
-				B987A4BC1A05AE790019E704 /* Blockchain.h */,
-				B987A4BD1A05AE790019E704 /* Blockchain.m */,
+				B987A4C51A05D05A0019E704 /* Wallet.h */,
+				B987A4C61A05D05A0019E704 /* Wallet.m */,
 				D79833911A05A11300810CE4 /* AppDelegate.h */,
 				D7738E6E1A05CF6C002685EE /* Keychain.h */,
 				D7738E6F1A05CF6C002685EE /* Keychain.m */,
@@ -360,10 +360,10 @@
 			files = (
 				D7738E651A05C44A002685EE /* UIImage+ResizedImage.m in Sources */,
 				D7738E6C1A05CAF4002685EE /* UIImage+QRCodes.m in Sources */,
-				B987A4BE1A05AE790019E704 /* Blockchain.m in Sources */,
 				D7738E701A05CF6C002685EE /* Keychain.m in Sources */,
 				D79833961A05A11300810CE4 /* ViewController.m in Sources */,
 				D79833931A05A11300810CE4 /* AppDelegate.m in Sources */,
+				B987A4C71A05D05A0019E704 /* Wallet.m in Sources */,
 				D7738E691A05C5DE002685EE /* NSURL+BitcoinURI.m in Sources */,
 				D7738E461A05AADA002685EE /* NotificationManager.m in Sources */,
 				D79833901A05A11300810CE4 /* main.m in Sources */,
