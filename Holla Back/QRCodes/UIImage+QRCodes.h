@@ -10,6 +10,17 @@
 
 @interface UIImage (QRCodes)
 
+
+/**
+ * @return An image which is a QR code containing the specified data.
+ */
 + (UIImage *) imageWithCode:(NSData *)data;
+
+
+/**
+ * @return The data in a QR code image, or nil.
+ */
+- (NSData *) codeExtractedFromImage;
+
 
 @end

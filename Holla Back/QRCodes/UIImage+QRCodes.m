@@ -8,6 +8,8 @@
 
 #import "UIImage+QRCodes.h"
 #import "UIImage+ResizedImage.h"
+#import "ZBarSDK.h"
+
 
 @implementation UIImage (QRCodes)
 
@@ -34,6 +36,12 @@
                                          scaleFactor:5.0];
     CGImageRelease(cgImage);
     return resized;
+}
+
+
+- (NSData *) codeExtractedFromImage
+{
+    return nil;
 }
 
 
