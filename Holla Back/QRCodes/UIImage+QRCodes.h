@@ -23,4 +23,16 @@
 - (NSData *) codeExtractedFromImage;
 
 
+/**
+ * @return an image by adding a LSB watermark.
+ */
+- (UIImage *) imageByWatermarkingWithCode:(UIImage *)code;
+
+
+/**
+ * @return an image by extracting an LSB watermark
+ */
+- (UIImage *) watermarkFromImage;
+
+
 @end

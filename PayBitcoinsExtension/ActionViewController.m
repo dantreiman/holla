@@ -15,6 +15,7 @@
 @interface ActionViewController ()
 
 @property (weak ,nonatomic) IBOutlet UIImageView *imageView;
+@property (weak ,nonatomic) IBOutlet UIImageView *imageView2;
 @property (weak, nonatomic) IBOutlet UIView * successView;
 @property (weak, nonatomic) IBOutlet UILabel * requestedLabel;
 @property (weak, nonatomic) IBOutlet UILabel * balanceLabel;
@@ -81,7 +82,16 @@
 - (void) loadImage:(UIImage *)image
 {
     [self.imageView setImage:image];
-    NSData * code = [image codeExtractedFromImage];
+    UIImage * decoded = [image watermarkFromImage];
+    self.imageView2.alpha = 0;
+    self.imageView2.image = decoded;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:1.0 animations:^{
+            self.imageView2.alpha = 0.1;
+        }];
+    });
+    
+    NSData * code = [decoded codeExtractedFromImage];    
     if (code) {
         NSString * urlString = [[NSString alloc] initWithData:code encoding:NSUTF8StringEncoding];
         NSURL * url = [NSURL URLWithString:urlString];
@@ -154,6 +164,7 @@
 
 
 - (IBAction) done {
+    [UIPasteboard generalPasteboard].image = [UIImage imageNamed:@"TakeMyMoney"];
     // Return any edited content to the host app.
     // This template doesn't do anything, so we just echo the passed in items.
     [self.extensionContext completeRequestReturningItems:self.extensionContext.inputItems completionHandler:nil];

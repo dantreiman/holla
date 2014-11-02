@@ -9,6 +9,7 @@
 #import "KeyboardViewController.h"
 #import "NSURL+BitcoinURI.h"
 #import "UIImage+QRCodes.h"
+#import "UIImage+ResizedImage.h"
 #import "Wallet.h"
 
 
@@ -99,12 +100,21 @@
     // NSString * address = self.wallet.address;
     if (!address) {
 #warning Replace this with fallback address for demo
-        address = @"ADDRESS";
+        address = @"1B8LsBU7VnCtbp3yNaVcJr9JQRHtxMuVQb";
     }
     NSString * amount = [NSString stringWithFormat:@"%.3f", [self BTCAmount]];
     NSURL * url = [NSURL URLWithBitcoinAddress:address amount:amount message:nil];
     UIImage * qrCode = [UIImage imageWithCode:[url.absoluteString dataUsingEncoding:NSUTF8StringEncoding]];
-    [UIPasteboard generalPasteboard].image = qrCode;
+    
+    UIImage * doge = [UIImage imageNamed:@"Doge"];
+    UIImage * scaledQRCode = [qrCode scaledImageWithQuality:kCGInterpolationNone size:doge.size];
+    // Generate Code, composite with image
+    UIImage * watermarked = [doge imageByWatermarkingWithCode:scaledQRCode];
+    
+    NSData * png = UIImagePNGRepresentation(watermarked);
+    UIImage * pngImage = [UIImage imageWithData:png];
+    
+    [UIPasteboard generalPasteboard].image = pngImage;
 }
 
 

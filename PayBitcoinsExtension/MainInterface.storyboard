@@ -40,6 +40,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXD-VY-WzH">
+                                <rect key="frame" x="16" y="184" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Balance: %@ BTC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hC9-Y5-tFU">
                                 <rect key="frame" x="16" y="155" width="288" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -47,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7h-4f-OTq">
-                                <rect key="frame" x="73" y="343" width="55" height="30"/>
+                                <rect key="frame" x="73" y="453" width="55" height="30"/>
                                 <state key="normal" title="Confirm">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -55,8 +61,14 @@
                                     <action selector="confirm:" destination="ObA-dk-sSI" eventType="touchUpInside" id="nzC-7o-Sgq"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U3A-2b-SWQ">
+                                <rect key="frame" x="16" y="222" width="288" height="223"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Zw-Yw-oW9">
+                                <rect key="frame" x="16" y="222" width="288" height="223"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orT-0f-o0y">
-                                <rect key="frame" x="186" y="343" width="48" height="30"/>
+                                <rect key="frame" x="186" y="453" width="48" height="30"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -64,19 +76,20 @@
                                     <action selector="done" destination="ObA-dk-sSI" eventType="touchUpInside" id="Odz-zZ-FjF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXD-VY-WzH">
-                                <rect key="frame" x="16" y="184" width="288" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="9Zw-Yw-oW9" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" constant="222" id="04d-4M-9zL"/>
+                            <constraint firstAttribute="trailing" secondItem="9Zw-Yw-oW9" secondAttribute="trailing" constant="16" id="3Ls-x8-vIa"/>
                             <constraint firstItem="mXw-l0-kiG" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="4OR-DK-SEf"/>
+                            <constraint firstAttribute="trailing" secondItem="U3A-2b-SWQ" secondAttribute="trailing" constant="16" id="5Zg-gG-GJ7"/>
+                            <constraint firstAttribute="bottom" secondItem="9Zw-Yw-oW9" secondAttribute="bottom" constant="83" id="8r8-lC-YzP"/>
+                            <constraint firstItem="U3A-2b-SWQ" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" constant="16" id="9If-rJ-vp8"/>
                             <constraint firstAttribute="trailing" secondItem="dpE-MC-yp5" secondAttribute="trailing" constant="16" id="9xQ-0s-haS"/>
                             <constraint firstAttribute="trailing" secondItem="NOA-Dm-cuz" secondAttribute="trailing" id="A05-Pj-hrr"/>
-                            <constraint firstAttribute="bottom" secondItem="orT-0f-o0y" secondAttribute="bottom" constant="155" id="FRo-wa-1aQ"/>
+                            <constraint firstAttribute="bottom" secondItem="orT-0f-o0y" secondAttribute="bottom" constant="45" id="FRo-wa-1aQ"/>
+                            <constraint firstItem="U3A-2b-SWQ" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" constant="222" id="GpQ-nM-m6I"/>
+                            <constraint firstItem="9Zw-Yw-oW9" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" constant="16" id="Gth-UX-iWw"/>
                             <constraint firstItem="NOA-Dm-cuz" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="HxO-8t-aoh"/>
                             <constraint firstItem="t7h-4f-OTq" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" constant="73" id="Jpl-z3-37F"/>
                             <constraint firstAttribute="trailing" secondItem="hC9-Y5-tFU" secondAttribute="trailing" constant="16" id="MiJ-q7-9Ho"/>
@@ -84,11 +97,12 @@
                             <constraint firstAttribute="trailing" secondItem="orT-0f-o0y" secondAttribute="trailing" constant="86" id="WX9-A8-WoF"/>
                             <constraint firstItem="hC9-Y5-tFU" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" constant="16" id="bEr-dO-MJZ"/>
                             <constraint firstAttribute="bottom" secondItem="mXw-l0-kiG" secondAttribute="bottom" id="eVX-yX-bSq"/>
+                            <constraint firstAttribute="bottom" secondItem="U3A-2b-SWQ" secondAttribute="bottom" constant="83" id="pcT-bi-jcx"/>
                             <constraint firstAttribute="trailing" secondItem="kXD-VY-WzH" secondAttribute="trailing" constant="16" id="qqU-MP-ObJ"/>
                             <constraint firstItem="mXw-l0-kiG" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" constant="64" id="sXd-fr-vUu"/>
                             <constraint firstItem="dpE-MC-yp5" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" constant="16" id="tQU-Yo-jd3"/>
                             <constraint firstItem="hC9-Y5-tFU" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" constant="155" id="tlB-nZ-ZDQ"/>
-                            <constraint firstAttribute="bottom" secondItem="t7h-4f-OTq" secondAttribute="bottom" constant="155" id="u7m-WK-Eps"/>
+                            <constraint firstAttribute="bottom" secondItem="t7h-4f-OTq" secondAttribute="bottom" constant="45" id="u7m-WK-Eps"/>
                             <constraint firstAttribute="trailing" secondItem="mXw-l0-kiG" secondAttribute="trailing" id="ubW-gD-5Cp"/>
                             <constraint firstItem="NOA-Dm-cuz" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" id="we0-1t-bgp"/>
                             <constraint firstItem="kXD-VY-WzH" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" constant="16" id="xmC-sr-TXY"/>
@@ -101,6 +115,8 @@
                         <outlet property="balanceLabel" destination="hC9-Y5-tFU" id="Tnl-eI-azl"/>
                         <outlet property="cancelButton" destination="orT-0f-o0y" id="Zgb-jX-KSQ"/>
                         <outlet property="confirmButton" destination="t7h-4f-OTq" id="Rgc-gB-NpY"/>
+                        <outlet property="imageView" destination="U3A-2b-SWQ" id="m3b-su-uof"/>
+                        <outlet property="imageView2" destination="9Zw-Yw-oW9" id="aky-es-Saw"/>
                         <outlet property="messageLabel" destination="kXD-VY-WzH" id="fhK-0d-iCy"/>
                         <outlet property="requestedLabel" destination="dpE-MC-yp5" id="PmF-hB-lDg"/>
                         <outlet property="successView" destination="mXw-l0-kiG" id="8nt-3X-wJq"/>

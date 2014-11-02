@@ -14,5 +14,8 @@
 - (UIImage *) scaledImageWithQuality:(CGInterpolationQuality)quality
                          scaleFactor:(CGFloat)scaleFactor;
 
+- (UIImage *) scaledImageWithQuality:(CGInterpolationQuality)quality
+                                size:(CGSize)size;
+
 
 @end

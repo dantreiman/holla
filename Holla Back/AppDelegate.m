@@ -81,7 +81,7 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     
     NSLog(@"Application entered background state.");
-    NSAssert(self.backgroundTask == UIBackgroundTaskInvalid, nil);
+    // NSAssert(self.backgroundTask == UIBackgroundTaskInvalid, nil);
     
     self.backgroundTask = [application beginBackgroundTaskWithExpirationHandler: ^{
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -110,6 +110,10 @@
 
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
+    if (self.backgroundTask != UIBackgroundTaskInvalid) {
+        [application endBackgroundTask:self.backgroundTask];
+        self.backgroundTask = UIBackgroundTaskInvalid;
+    }
     [self.backgroundTimer invalidate];
     self.backgroundTimer = nil;
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
