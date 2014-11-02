@@ -33,14 +33,14 @@
     return self;
 }
 
-+ (void)fetchOrCreateWallet:(void (^)(Wallet *))success failure:(void (^)(void))failure {
++ (instancetype)fetchOrCreateWallet:(void (^)(Wallet *))success failure:(void (^)(void))failure {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     Keychain *keychain = [Keychain sharedKeychain];
     NSString *walletGUID = [defaults stringForKey:kWalletGUIDDefaultKey];
     NSString *password = [keychain retrievePasswordForAccount:kWalletPasswordDefaultKey];
     
     if (walletGUID != nil) {
-        success([[Wallet alloc] initWithGUID:walletGUID andPassword:password]);
+        return [[Wallet alloc] initWithGUID:walletGUID andPassword:password];
     }
     
     NSString *walletUrl = [NSString stringWithFormat:@"%@%@",
@@ -62,6 +62,7 @@
                      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                          failure();
                      }];
+    return nil;
 }
 
 - (void)generateAddress:(void (^)(NSString *))success
@@ -74,6 +75,7 @@
                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
                            NSDictionary *response = (NSDictionary *)responseObject;
                            NSString *address = response[@"address"];
+                           self.address = address;
                            success(address);
                        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                            failure();
