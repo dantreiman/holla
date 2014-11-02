@@ -41,6 +41,7 @@
 		D7738E9C1A0606A7002685EE /* NSDecimalNumber+Bitcoin.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E9A1A0606A7002685EE /* NSDecimalNumber+Bitcoin.m */; };
 		D7738E9D1A0606A7002685EE /* NSDecimalNumber+Bitcoin.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E9A1A0606A7002685EE /* NSDecimalNumber+Bitcoin.m */; };
 		D7738EA21A06232D002685EE /* ActionExtension.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7738EA11A06232D002685EE /* ActionExtension.xcassets */; };
+		D7738EA41A062BBD002685EE /* KeyboardAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7738EA31A062BBD002685EE /* KeyboardAssets.xcassets */; };
 		D79833901A05A11300810CE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D798338F1A05A11300810CE4 /* main.m */; };
 		D79833931A05A11300810CE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D79833921A05A11300810CE4 /* AppDelegate.m */; };
 		D79833961A05A11300810CE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D79833951A05A11300810CE4 /* ViewController.m */; };
@@ -121,6 +122,7 @@
 		D7738E9F1A061A3E002685EE /* BitcoinKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BitcoinKeyboard.entitlements; sourceTree = "<group>"; };
 		D7738EA01A061A4C002685EE /* PayBitcoinsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PayBitcoinsExtension.entitlements; sourceTree = "<group>"; };
 		D7738EA11A06232D002685EE /* ActionExtension.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ActionExtension.xcassets; sourceTree = "<group>"; };
+		D7738EA31A062BBD002685EE /* KeyboardAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = KeyboardAssets.xcassets; sourceTree = "<group>"; };
 		D798338A1A05A11300810CE4 /* Holla Back.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holla Back.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D798338E1A05A11300810CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D798338F1A05A11300810CE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				D7738E501A05ADE9002685EE /* KeyboardViewController.h */,
 				D7738E511A05ADE9002685EE /* KeyboardViewController.m */,
 				D7738E5A1A05B22E002685EE /* KeyboardViewController.xib */,
+				D7738EA31A062BBD002685EE /* KeyboardAssets.xcassets */,
 				D7738E4E1A05ADE9002685EE /* Supporting Files */,
 			);
 			path = BitcoinKeyboard;
@@ -428,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7738E5B1A05B22E002685EE /* KeyboardViewController.xib in Resources */,
+				D7738EA41A062BBD002685EE /* KeyboardAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

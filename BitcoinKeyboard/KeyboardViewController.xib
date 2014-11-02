@@ -18,8 +18,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIk-zK-Cg6">
-                    <rect key="frame" x="17" y="93" width="289" height="30"/>
-                    <color key="backgroundColor" white="0.90303679435483875" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="17" y="71" width="289" height="80"/>
+                    <color key="backgroundColor" red="0.94117647058823528" green="0.96078431372549022" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -27,28 +27,6 @@
                         <action selector="requestPayment:" destination="-1" eventType="touchUpInside" id="0Aa-3d-Em1"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgN-eR-S6P">
-                    <rect key="frame" x="17" y="168" width="137" height="22"/>
-                    <state key="normal" title="Next Keyboard">
-                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="nextInputMode:" destination="-1" eventType="touchUpInside" id="AJJ-X0-uca"/>
-                    </connections>
-                </button>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="Wmh-jO-vUE">
-                    <rect key="frame" x="15" y="25" width="299" height="31"/>
-                    <connections>
-                        <action selector="amountChanged:" destination="-1" eventType="valueChanged" id="SNx-Q2-nOD"/>
-                    </connections>
-                </slider>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rId-S7-zFx">
-                    <rect key="frame" x="17" y="97" width="289" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mv-8a-fgc">
                     <rect key="frame" x="269" y="168" width="43" height="34"/>
                     <state key="normal" title="&lt;=">
@@ -57,20 +35,43 @@
                     </state>
                     <connections>
                         <action selector="deleteBackward:" destination="-1" eventType="touchUpInside" id="QAs-MC-c4h"/>
-                        <action selector="nextInputMode:" destination="-1" eventType="touchUpInside" id="eNR-ke-cu0"/>
+                    </connections>
+                </button>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.002" minValue="0.0" maxValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wmh-jO-vUE">
+                    <rect key="frame" x="15" y="25" width="299" height="31"/>
+                    <color key="thumbTintColor" red="0.94117647059999998" green="0.96078431369999995" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="amountChanged:" destination="-1" eventType="valueChanged" id="SNx-Q2-nOD"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rId-S7-zFx">
+                    <rect key="frame" x="17" y="100" width="289" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgN-eR-S6P">
+                    <rect key="frame" x="17" y="141" width="174" height="61"/>
+                    <state key="normal" title="Next Keyboard" image="GlobeKey">
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="nextInputMode:" destination="-1" eventType="touchUpInside" id="AJJ-X0-uca"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="eIk-zK-Cg6" firstAttribute="centerY" secondItem="rId-S7-zFx" secondAttribute="centerY" constant="0.5" id="2Fs-df-FzH"/>
                 <constraint firstAttribute="trailing" secondItem="eIk-zK-Cg6" secondAttribute="trailing" constant="14" id="7y6-bE-35F"/>
                 <constraint firstAttribute="trailing" secondItem="6Mv-8a-fgc" secondAttribute="trailing" constant="8" id="Bay-Io-1kD"/>
                 <constraint firstItem="rId-S7-zFx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="17" id="BmY-aP-f3v"/>
                 <constraint firstItem="Wmh-jO-vUE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="17" id="Fbl-fe-qBc"/>
-                <constraint firstItem="eIk-zK-Cg6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="93" id="HvI-qx-rIK"/>
+                <constraint firstItem="eIk-zK-Cg6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="71" id="HvI-qx-rIK"/>
                 <constraint firstAttribute="trailing" secondItem="Wmh-jO-vUE" secondAttribute="trailing" constant="8" id="IEa-7a-o3u"/>
-                <constraint firstAttribute="bottom" secondItem="DgN-eR-S6P" secondAttribute="bottom" constant="26" id="RfW-Qu-3M5"/>
+                <constraint firstAttribute="bottom" secondItem="DgN-eR-S6P" secondAttribute="bottom" constant="14" id="RfW-Qu-3M5"/>
                 <constraint firstItem="Wmh-jO-vUE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="25" id="V3c-Bw-uBI"/>
+                <constraint firstAttribute="bottom" secondItem="eIk-zK-Cg6" secondAttribute="bottom" constant="65" id="WIg-R6-9Ee"/>
                 <constraint firstAttribute="bottom" secondItem="6Mv-8a-fgc" secondAttribute="bottom" constant="14" id="erq-IQ-BhZ"/>
                 <constraint firstItem="DgN-eR-S6P" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="17" id="obf-o1-DbG"/>
                 <constraint firstItem="eIk-zK-Cg6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="17" id="wAK-KE-JMq"/>
@@ -79,4 +80,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
+    <resources>
+        <image name="GlobeKey" width="53" height="61"/>
+    </resources>
 </document>
