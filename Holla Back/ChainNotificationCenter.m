@@ -55,21 +55,31 @@
     NSLog(@"Received message: %@", json);
     
     NSDictionary *payload = json[@"payload"];
-    NSDecimalNumber *received = payload[@"received"];
-    NSNumber *confirmations = payload[@"confirmations"];
-    if (received > 0 && confirmations == 0) {
-        NSNumber *amountInBTC = [received convertSatoshiToBTC];
-        UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-        localNotification.alertBody = [NSString stringWithFormat:@"You received %f BTC!", [amountInBTC doubleValue]];
-        localNotification.soundName = UILocalNotificationDefaultSoundName;
-        localNotification.applicationIconBadgeNumber = 1;
-        [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    NSDictionary *transaction = payload[@"transaction"];
+    NSArray *outputs = transaction[@"outputs"];
+    
+    for (NSDictionary *output in outputs) {
+        NSArray *addresses = output[@"addresses"];
+        for(NSString *address in addresses) {
+            if ([self.address isEqualToString:address]) {
+                NSLog(@"Received BTC!");
+                NSDecimalNumber *amount = [NSDecimalNumber decimalNumberWithString:[output[@"value"] stringValue]];
+                NSNumber *amountInBTC = [amount convertSatoshiToBTC];
+                UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+                localNotification.alertBody = [NSString stringWithFormat:@"You received %f BTC!", [amountInBTC doubleValue]];
+                localNotification.soundName = UILocalNotificationDefaultSoundName;
+                localNotification.applicationIconBadgeNumber = 1;
+                [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+                return;
+            }
+        }
     }
+
 }
 
 - (void)webSocketDidOpen:(SRWebSocket *)webSocket {
-    NSDictionary *params = @{@"type": @"address", @"address": self.address, @"block_chain": @"bitcoin"};
-//    NSDictionary *params = @{@"type": @"new-transaction", @"block_chain": @"bitcoin"};
+//    NSDictionary *params = @{@"type": @"address", @"address": self.address, @"block_chain": @"bitcoin"};
+    NSDictionary *params = @{@"type": @"new-transaction", @"block_chain": @"bitcoin"};
     NSString *jsonString = [self jsonStringFromDictionary:params];
     [webSocket send:jsonString];
 }
