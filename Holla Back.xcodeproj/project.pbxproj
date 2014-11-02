@@ -23,6 +23,10 @@
 		D7738E711A05CF6C002685EE /* Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E6F1A05CF6C002685EE /* Keychain.m */; };
 		D7738E731A05D391002685EE /* libPods-ZBarSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7738E721A05D391002685EE /* libPods-ZBarSDK.a */; };
 		D7738E751A05D3A5002685EE /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D7738E741A05D3A5002685EE /* libiconv.dylib */; };
+		D7738E801A05D78F002685EE /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E7F1A05D78F002685EE /* ActionViewController.m */; };
+		D7738E821A05D78F002685EE /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7738E811A05D78F002685EE /* MainInterface.storyboard */; };
+		D7738E851A05D78F002685EE /* PayBitcoinsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D7738E7A1A05D78F002685EE /* PayBitcoinsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D7738E8A1A05D79D002685EE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7738E891A05D79D002685EE /* libPods.a */; };
 		D79833901A05A11300810CE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D798338F1A05A11300810CE4 /* main.m */; };
 		D79833931A05A11300810CE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D79833921A05A11300810CE4 /* AppDelegate.m */; };
 		D79833961A05A11300810CE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D79833951A05A11300810CE4 /* ViewController.m */; };
@@ -39,6 +43,13 @@
 			remoteGlobalIDString = D7738E4B1A05ADE9002685EE;
 			remoteInfo = BitcoinKeyboard;
 		};
+		D7738E831A05D78F002685EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D79833821A05A11300810CE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7738E791A05D78F002685EE;
+			remoteInfo = PayBitcoinsExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +59,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				D7738E851A05D78F002685EE /* PayBitcoinsExtension.appex in Embed App Extensions */,
 				D7738E551A05ADE9002685EE /* BitcoinKeyboard.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -77,6 +89,12 @@
 		D7738E6F1A05CF6C002685EE /* Keychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Keychain.m; sourceTree = "<group>"; };
 		D7738E721A05D391002685EE /* libPods-ZBarSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ZBarSDK.a"; path = "Pods/build/Debug-iphoneos/libPods-ZBarSDK.a"; sourceTree = "<group>"; };
 		D7738E741A05D3A5002685EE /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		D7738E7A1A05D78F002685EE /* PayBitcoinsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PayBitcoinsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7738E7D1A05D78F002685EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7738E7E1A05D78F002685EE /* ActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
+		D7738E7F1A05D78F002685EE /* ActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionViewController.m; sourceTree = "<group>"; };
+		D7738E811A05D78F002685EE /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		D7738E891A05D79D002685EE /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		D798338A1A05A11300810CE4 /* Holla Back.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holla Back.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D798338E1A05A11300810CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D798338F1A05A11300810CE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -97,6 +115,14 @@
 			files = (
 				D7738E751A05D3A5002685EE /* libiconv.dylib in Frameworks */,
 				D7738E731A05D391002685EE /* libPods-ZBarSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7738E771A05D78F002685EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7738E8A1A05D79D002685EE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +149,7 @@
 		48EEA368738F408A98F43BDA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7738E891A05D79D002685EE /* libPods.a */,
 				D7738E741A05D3A5002685EE /* libiconv.dylib */,
 				D7738E721A05D391002685EE /* libPods-ZBarSDK.a */,
 				DD3EDA6CC31C49DBB5606B87 /* libPods.a */,
@@ -160,11 +187,31 @@
 			path = QRCodes;
 			sourceTree = "<group>";
 		};
+		D7738E7B1A05D78F002685EE /* PayBitcoinsExtension */ = {
+			isa = PBXGroup;
+			children = (
+				D7738E7E1A05D78F002685EE /* ActionViewController.h */,
+				D7738E7F1A05D78F002685EE /* ActionViewController.m */,
+				D7738E811A05D78F002685EE /* MainInterface.storyboard */,
+				D7738E7C1A05D78F002685EE /* Supporting Files */,
+			);
+			path = PayBitcoinsExtension;
+			sourceTree = "<group>";
+		};
+		D7738E7C1A05D78F002685EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7738E7D1A05D78F002685EE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D79833811A05A11300810CE4 = {
 			isa = PBXGroup;
 			children = (
 				D798338C1A05A11300810CE4 /* Holla Back */,
 				D7738E4D1A05ADE9002685EE /* BitcoinKeyboard */,
+				D7738E7B1A05D78F002685EE /* PayBitcoinsExtension */,
 				D798338B1A05A11300810CE4 /* Products */,
 				48EEA368738F408A98F43BDA /* Frameworks */,
 				4592ECD26813050EA62FD8BF /* Pods */,
@@ -176,6 +223,7 @@
 			children = (
 				D798338A1A05A11300810CE4 /* Holla Back.app */,
 				D7738E4C1A05ADE9002685EE /* BitcoinKeyboard.appex */,
+				D7738E7A1A05D78F002685EE /* PayBitcoinsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -233,6 +281,23 @@
 			productReference = D7738E4C1A05ADE9002685EE /* BitcoinKeyboard.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		D7738E791A05D78F002685EE /* PayBitcoinsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7738E881A05D78F002685EE /* Build configuration list for PBXNativeTarget "PayBitcoinsExtension" */;
+			buildPhases = (
+				D7738E761A05D78F002685EE /* Sources */,
+				D7738E771A05D78F002685EE /* Frameworks */,
+				D7738E781A05D78F002685EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PayBitcoinsExtension;
+			productName = PayBitcoinsExtension;
+			productReference = D7738E7A1A05D78F002685EE /* PayBitcoinsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		D79833891A05A11300810CE4 /* Holla Back */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D79833AD1A05A11300810CE4 /* Build configuration list for PBXNativeTarget "Holla Back" */;
@@ -248,6 +313,7 @@
 			);
 			dependencies = (
 				D7738E541A05ADE9002685EE /* PBXTargetDependency */,
+				D7738E841A05D78F002685EE /* PBXTargetDependency */,
 			);
 			name = "Holla Back";
 			productName = "Holla Back";
@@ -264,6 +330,9 @@
 				ORGANIZATIONNAME = "Only The Best";
 				TargetAttributes = {
 					D7738E4B1A05ADE9002685EE = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					D7738E791A05D78F002685EE = {
 						CreatedOnToolsVersion = 6.1;
 					};
 					D79833891A05A11300810CE4 = {
@@ -291,6 +360,7 @@
 			targets = (
 				D79833891A05A11300810CE4 /* Holla Back */,
 				D7738E4B1A05ADE9002685EE /* BitcoinKeyboard */,
+				D7738E791A05D78F002685EE /* PayBitcoinsExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -301,6 +371,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7738E5B1A05B22E002685EE /* KeyboardViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7738E781A05D78F002685EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7738E821A05D78F002685EE /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +440,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D7738E761A05D78F002685EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7738E801A05D78F002685EE /* ActionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D79833861A05A11300810CE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -385,6 +471,11 @@
 			isa = PBXTargetDependency;
 			target = D7738E4B1A05ADE9002685EE /* BitcoinKeyboard */;
 			targetProxy = D7738E531A05ADE9002685EE /* PBXContainerItemProxy */;
+		};
+		D7738E841A05D78F002685EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7738E791A05D78F002685EE /* PayBitcoinsExtension */;
+			targetProxy = D7738E831A05D78F002685EE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -447,6 +538,38 @@
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
 				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D7738E861A05D78F002685EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PayBitcoinsExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D7738E871A05D78F002685EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PayBitcoinsExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -561,6 +684,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D7738E881A05D78F002685EE /* Build configuration list for PBXNativeTarget "PayBitcoinsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7738E861A05D78F002685EE /* Debug */,
+				D7738E871A05D78F002685EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		D79833851A05A11300810CE4 /* Build configuration list for PBXProject "Holla Back" */ = {
 			isa = XCConfigurationList;

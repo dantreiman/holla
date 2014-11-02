@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="amountSlider" destination="Wmh-jO-vUE" id="NKS-6m-YQU"/>
                 <outlet property="requestButton" destination="eIk-zK-Cg6" id="1di-er-l8F"/>
+                <outlet property="requestLabel" destination="rId-S7-zFx" id="6oW-vP-aAO"/>
                 <outlet property="view" destination="iN0-l3-epB" id="C8E-DD-CQb"/>
             </connections>
         </placeholder>
@@ -16,16 +17,17 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIk-zK-Cg6">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIk-zK-Cg6">
                     <rect key="frame" x="17" y="93" width="289" height="30"/>
-                    <state key="normal" title="Request %.3f BTC (%.2f USD)">
+                    <color key="backgroundColor" white="0.90303679435483875" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="requestPayment:" destination="-1" eventType="touchUpInside" id="0Aa-3d-Em1"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgN-eR-S6P">
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgN-eR-S6P">
                     <rect key="frame" x="17" y="168" width="137" height="22"/>
                     <state key="normal" title="Next Keyboard">
                         <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -35,14 +37,32 @@
                         <action selector="nextInputMode:" destination="-1" eventType="touchUpInside" id="AJJ-X0-uca"/>
                     </connections>
                 </button>
-                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wmh-jO-vUE">
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wmh-jO-vUE">
                     <rect key="frame" x="15" y="25" width="299" height="31"/>
                     <connections>
                         <action selector="amountChanged:" destination="-1" eventType="valueChanged" id="SNx-Q2-nOD"/>
                     </connections>
                 </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rId-S7-zFx">
+                    <rect key="frame" x="17" y="97" width="289" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eIk-zK-Cg6" secondAttribute="trailing" constant="14" id="7y6-bE-35F"/>
+                <constraint firstItem="rId-S7-zFx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="17" id="BmY-aP-f3v"/>
+                <constraint firstItem="Wmh-jO-vUE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="17" id="Fbl-fe-qBc"/>
+                <constraint firstItem="eIk-zK-Cg6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="93" id="HvI-qx-rIK"/>
+                <constraint firstAttribute="trailing" secondItem="Wmh-jO-vUE" secondAttribute="trailing" constant="8" id="IEa-7a-o3u"/>
+                <constraint firstAttribute="bottom" secondItem="DgN-eR-S6P" secondAttribute="bottom" constant="26" id="RfW-Qu-3M5"/>
+                <constraint firstItem="Wmh-jO-vUE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="25" id="V3c-Bw-uBI"/>
+                <constraint firstItem="DgN-eR-S6P" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="17" id="obf-o1-DbG"/>
+                <constraint firstItem="eIk-zK-Cg6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="17" id="wAK-KE-JMq"/>
+                <constraint firstAttribute="trailing" secondItem="rId-S7-zFx" secondAttribute="trailing" constant="14" id="zar-dM-MQu"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
