@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		143A3841CCBA40D99A37D36E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3EDA6CC31C49DBB5606B87 /* libPods.a */; };
 		D7738E461A05AADA002685EE /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E451A05AAD9002685EE /* NotificationManager.m */; };
+		D7738E521A05ADE9002685EE /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E511A05ADE9002685EE /* KeyboardViewController.m */; };
+		D7738E551A05ADE9002685EE /* BitcoinKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D7738E4C1A05ADE9002685EE /* BitcoinKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D7738E5B1A05B22E002685EE /* KeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7738E5A1A05B22E002685EE /* KeyboardViewController.xib */; };
 		D79833901A05A11300810CE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D798338F1A05A11300810CE4 /* main.m */; };
 		D79833931A05A11300810CE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D79833921A05A11300810CE4 /* AppDelegate.m */; };
 		D79833961A05A11300810CE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D79833951A05A11300810CE4 /* ViewController.m */; };
@@ -17,11 +20,40 @@
 		D798339E1A05A11300810CE4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D798339C1A05A11300810CE4 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D7738E531A05ADE9002685EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D79833821A05A11300810CE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7738E4B1A05ADE9002685EE;
+			remoteInfo = BitcoinKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D7738E591A05ADE9002685EE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D7738E551A05ADE9002685EE /* BitcoinKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C09DDCB69FE863F0BFE17A61 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C9021190C8A429D50BA9CF3C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D7738E441A05AAD9002685EE /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationManager.h; sourceTree = "<group>"; };
 		D7738E451A05AAD9002685EE /* NotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationManager.m; sourceTree = "<group>"; };
+		D7738E4C1A05ADE9002685EE /* BitcoinKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BitcoinKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7738E4F1A05ADE9002685EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7738E501A05ADE9002685EE /* KeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
+		D7738E511A05ADE9002685EE /* KeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
+		D7738E5A1A05B22E002685EE /* KeyboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardViewController.xib; sourceTree = "<group>"; };
 		D798338A1A05A11300810CE4 /* Holla Back.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holla Back.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D798338E1A05A11300810CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D798338F1A05A11300810CE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -36,6 +68,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D7738E491A05ADE9002685EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D79833871A05A11300810CE4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,10 +103,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D7738E4D1A05ADE9002685EE /* BitcoinKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D7738E501A05ADE9002685EE /* KeyboardViewController.h */,
+				D7738E511A05ADE9002685EE /* KeyboardViewController.m */,
+				D7738E5A1A05B22E002685EE /* KeyboardViewController.xib */,
+				D7738E4E1A05ADE9002685EE /* Supporting Files */,
+			);
+			path = BitcoinKeyboard;
+			sourceTree = "<group>";
+		};
+		D7738E4E1A05ADE9002685EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7738E4F1A05ADE9002685EE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D79833811A05A11300810CE4 = {
 			isa = PBXGroup;
 			children = (
 				D798338C1A05A11300810CE4 /* Holla Back */,
+				D7738E4D1A05ADE9002685EE /* BitcoinKeyboard */,
 				D798338B1A05A11300810CE4 /* Products */,
 				48EEA368738F408A98F43BDA /* Frameworks */,
 				4592ECD26813050EA62FD8BF /* Pods */,
@@ -78,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				D798338A1A05A11300810CE4 /* Holla Back.app */,
+				D7738E4C1A05ADE9002685EE /* BitcoinKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +171,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D7738E4B1A05ADE9002685EE /* BitcoinKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7738E561A05ADE9002685EE /* Build configuration list for PBXNativeTarget "BitcoinKeyboard" */;
+			buildPhases = (
+				D7738E481A05ADE9002685EE /* Sources */,
+				D7738E491A05ADE9002685EE /* Frameworks */,
+				D7738E4A1A05ADE9002685EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BitcoinKeyboard;
+			productName = BitcoinKeyboard;
+			productReference = D7738E4C1A05ADE9002685EE /* BitcoinKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		D79833891A05A11300810CE4 /* Holla Back */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D79833AD1A05A11300810CE4 /* Build configuration list for PBXNativeTarget "Holla Back" */;
@@ -120,10 +197,12 @@
 				D79833871A05A11300810CE4 /* Frameworks */,
 				D79833881A05A11300810CE4 /* Resources */,
 				A6D584A4B11944E7B32E23A3 /* Copy Pods Resources */,
+				D7738E591A05ADE9002685EE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D7738E541A05ADE9002685EE /* PBXTargetDependency */,
 			);
 			name = "Holla Back";
 			productName = "Holla Back";
@@ -139,6 +218,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Only The Best";
 				TargetAttributes = {
+					D7738E4B1A05ADE9002685EE = {
+						CreatedOnToolsVersion = 6.1;
+					};
 					D79833891A05A11300810CE4 = {
 						CreatedOnToolsVersion = 6.1;
 						SystemCapabilities = {
@@ -163,11 +245,20 @@
 			projectRoot = "";
 			targets = (
 				D79833891A05A11300810CE4 /* Holla Back */,
+				D7738E4B1A05ADE9002685EE /* BitcoinKeyboard */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D7738E4A1A05ADE9002685EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7738E5B1A05B22E002685EE /* KeyboardViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D79833881A05A11300810CE4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,6 +305,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D7738E481A05ADE9002685EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7738E521A05ADE9002685EE /* KeyboardViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D79833861A05A11300810CE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,6 +325,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D7738E541A05ADE9002685EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7738E4B1A05ADE9002685EE /* BitcoinKeyboard */;
+			targetProxy = D7738E531A05ADE9002685EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D79833971A05A11300810CE4 /* Main.storyboard */ = {
@@ -247,6 +354,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D7738E571A05ADE9002685EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BitcoinKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D7738E581A05ADE9002685EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BitcoinKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		D79833AB1A05A11300810CE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -348,6 +479,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D7738E561A05ADE9002685EE /* Build configuration list for PBXNativeTarget "BitcoinKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7738E571A05ADE9002685EE /* Debug */,
+				D7738E581A05ADE9002685EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D79833851A05A11300810CE4 /* Build configuration list for PBXProject "Holla Back" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
