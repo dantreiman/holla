@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Chain.h"
 #import "Wallet.h"
+#import "ChainNotificationCenter.h"
 
 
 @interface AppDelegate ()
@@ -24,7 +25,6 @@
     // Initialize Chain
     Chain * chain = [Chain sharedInstanceWithToken:@"08f3b259a2d06e8515a01426de687f34"];
     
-    
     // Sample Code
 //    NSString * address = @"1A3tnautz38PZL15YWfxTeh8MtuMDhEPVB";
 //    [chain getAddress:address completionHandler:^(NSDictionary *dict, NSError *error) {
@@ -39,6 +39,9 @@
             NSLog(@"Address = %@", address);
             NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
             [userDefaults setObject:address forKey:@"Address"];
+            ChainNotificationCenter *chainNotifier = [ChainNotificationCenter sharedCenter];
+            chainNotifier.address = address;
+            [chainNotifier open];
         } failure:^{}];
         
     } failure:^{
