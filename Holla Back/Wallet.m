@@ -113,6 +113,7 @@
                            if (addresses.count > 0) {
                                NSDictionary * addressJSON = addresses.firstObject;
                                self.address = addressJSON[@"address"];
+                               self.balance = addressJSON[@"balance"];
                                success(self.address);
                            }
                            else {
