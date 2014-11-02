@@ -52,6 +52,8 @@
         return;
     }
     
+    NSLog(@"Received message: %@", json);
+    
     NSDictionary *payload = json[@"payload"];
     NSDecimalNumber *received = payload[@"received"];
     NSNumber *confirmations = payload[@"confirmations"];
