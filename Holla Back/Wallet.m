@@ -39,6 +39,12 @@
 + (void)fetchOrCreateWallet:(void (^)(Wallet *))success failure:(void (^)(void))failure {
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     Keychain * keychain = [Keychain sharedKeychain];
+    
+    // Dan's iPhone address and password
+//    [defaults setObject:@"e28aa765-9c7c-4768-9e65-3b7380a7be0b" forKey:kWalletGUIDDefaultKey];
+//    [defaults synchronize];
+//    [keychain storePassword:@"yiG6Cal3neK3ep8d" forAccount:@"e28aa765-9c7c-4768-9e65-3b7380a7be0b"];
+    
     NSString * walletGUID = [defaults stringForKey:kWalletGUIDDefaultKey];
     NSString * password = [keychain retrievePasswordForAccount:walletGUID];
     
