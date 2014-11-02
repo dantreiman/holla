@@ -9,6 +9,7 @@
 #import "KeyboardViewController.h"
 #import "NSURL+BitcoinURI.h"
 #import "UIImage+QRCodes.h"
+#import "Wallet.h"
 
 
 @interface KeyboardViewController ()
@@ -17,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UISlider * amountSlider;
 @property (weak, nonatomic) IBOutlet UIButton * requestButton;
 
+@property (strong, nonatomic) Wallet *wallet;
 
 - (IBAction) nextInputMode:(id)sender;
 
@@ -39,6 +41,11 @@
     UINib * nib = [UINib nibWithNibName:@"KeyboardViewController" bundle:nil];
     [nib instantiateWithOwner:self options:nil];
     [self amountChanged:self.amountSlider];
+//    self.wallet = [Wallet fetchOrCreateWallet:^(Wallet *wallet) {
+//        self.wallet = wallet;
+//    } failure:^{
+//        
+//    }];
 }
 
 
@@ -93,8 +100,6 @@
     NSString * address = @"ADDRESS";
     NSString * amount = [NSString stringWithFormat:@"%.3f", [self BTCAmount]];
     NSURL * url = [NSURL URLWithBitcoinAddress:address amount:amount message:nil];
-    
-    [self.textDocumentProxy insertText:url.absoluteString];
     UIImage * qrCode = [UIImage imageWithCode:[url.absoluteString dataUsingEncoding:NSUTF8StringEncoding]];
     [UIPasteboard generalPasteboard].image = qrCode;
 }
