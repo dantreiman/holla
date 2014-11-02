@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		143A3841CCBA40D99A37D36E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3EDA6CC31C49DBB5606B87 /* libPods.a */; };
-		B9A24C5A1A05A79900B9929D /* Blockchain.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A24C591A05A79900B9929D /* Blockchain.m */; };
+		D7738E461A05AADA002685EE /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E451A05AAD9002685EE /* NotificationManager.m */; };
 		D79833901A05A11300810CE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D798338F1A05A11300810CE4 /* main.m */; };
 		D79833931A05A11300810CE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D79833921A05A11300810CE4 /* AppDelegate.m */; };
 		D79833961A05A11300810CE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D79833951A05A11300810CE4 /* ViewController.m */; };
@@ -18,10 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B9A24C581A05A79900B9929D /* Blockchain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blockchain.h; sourceTree = "<group>"; };
-		B9A24C591A05A79900B9929D /* Blockchain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Blockchain.m; sourceTree = "<group>"; };
 		C09DDCB69FE863F0BFE17A61 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C9021190C8A429D50BA9CF3C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D7738E441A05AAD9002685EE /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationManager.h; sourceTree = "<group>"; };
+		D7738E451A05AAD9002685EE /* NotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationManager.m; sourceTree = "<group>"; };
 		D798338A1A05A11300810CE4 /* Holla Back.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holla Back.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D798338E1A05A11300810CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D798338F1A05A11300810CE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,12 +85,12 @@
 		D798338C1A05A11300810CE4 /* Holla Back */ = {
 			isa = PBXGroup;
 			children = (
-				B9A24C581A05A79900B9929D /* Blockchain.h */,
-				B9A24C591A05A79900B9929D /* Blockchain.m */,
 				D79833911A05A11300810CE4 /* AppDelegate.h */,
 				D79833921A05A11300810CE4 /* AppDelegate.m */,
 				D79833941A05A11300810CE4 /* ViewController.h */,
 				D79833951A05A11300810CE4 /* ViewController.m */,
+				D7738E441A05AAD9002685EE /* NotificationManager.h */,
+				D7738E451A05AAD9002685EE /* NotificationManager.m */,
 				D79833971A05A11300810CE4 /* Main.storyboard */,
 				D798339A1A05A11300810CE4 /* Images.xcassets */,
 				D798339C1A05A11300810CE4 /* LaunchScreen.xib */,
@@ -141,6 +141,11 @@
 				TargetAttributes = {
 					D79833891A05A11300810CE4 = {
 						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -214,8 +219,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D79833961A05A11300810CE4 /* ViewController.m in Sources */,
-				B9A24C5A1A05A79900B9929D /* Blockchain.m in Sources */,
 				D79833931A05A11300810CE4 /* AppDelegate.m in Sources */,
+				D7738E461A05AADA002685EE /* NotificationManager.m in Sources */,
 				D79833901A05A11300810CE4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

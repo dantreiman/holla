@@ -16,7 +16,7 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
     // Initialize Chain
@@ -30,8 +30,18 @@
         NSLog(@"data=%@ error=%@", dict, error);
     }];
     
+    [self registerForNotifications];
     return YES;
 }
+
+
+- (void) registerForNotifications
+{
+    UIUserNotificationSettings * settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound
+                                                                              categories:[NSSet set]];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
