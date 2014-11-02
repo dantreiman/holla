@@ -37,7 +37,7 @@
                         <action selector="nextInputMode:" destination="-1" eventType="touchUpInside" id="AJJ-X0-uca"/>
                     </connections>
                 </button>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wmh-jO-vUE">
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="Wmh-jO-vUE">
                     <rect key="frame" x="15" y="25" width="299" height="31"/>
                     <connections>
                         <action selector="amountChanged:" destination="-1" eventType="valueChanged" id="SNx-Q2-nOD"/>

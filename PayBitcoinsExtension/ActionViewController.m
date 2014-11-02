@@ -161,6 +161,8 @@
 
 
 - (IBAction) confirm:(id)sender {
+    self.confirmButton.enabled = NO;
+    self.cancelButton.enabled = NO;
     // Do Transaction
     //...
     [self.wallet sendPayment:self.receivingAddress
@@ -169,7 +171,7 @@
                          [self paymentSucceeded];
                      }
                      failure:^ {
-                         
+                         self.cancelButton.enabled = YES;
                      }];
 }
 
