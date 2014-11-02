@@ -40,7 +40,7 @@
     
     
     [Wallet fetchOrCreateWallet:^(Wallet * wallet) {
-        NSLog(@"%@", wallet);
+        NSLog(@"Loaded Wallet:\n GUID: %@\n Password: %@\n", wallet.guid, wallet.password);
         
         [wallet fetchAddresses:^(NSString * address) {
             NSLog(@"Address = %@", address);
