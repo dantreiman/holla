@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton * requestButton;
 @property (weak, nonatomic) IBOutlet UILabel * requestLabel;
 
-
+- (IBAction) deleteBackward:(id)sender;
 - (IBAction) nextInputMode:(id)sender;
 
 @end
@@ -93,9 +93,14 @@
     NSString * amount = [NSString stringWithFormat:@"%.3f", [self BTCAmount]];
     NSURL * url = [NSURL URLWithBitcoinAddress:address amount:amount message:nil];
     
-    [self.textDocumentProxy insertText:url.absoluteString];
     UIImage * qrCode = [UIImage imageWithCode:[url.absoluteString dataUsingEncoding:NSUTF8StringEncoding]];
     [UIPasteboard generalPasteboard].image = qrCode;
+}
+
+
+- (IBAction) deleteBackward:(id)sender
+{
+    [self.textDocumentProxy deleteBackward];
 }
 
 
