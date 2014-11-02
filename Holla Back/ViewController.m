@@ -58,7 +58,7 @@
 #pragma mark - Actions
 
 
-- (IBAction) share:(id)sender
+- (IBAction) share:(UIButton *)sender
 {
     // For testing, bring up UIActionSheet with the image
     NSArray * items = @[self.imageView.image];
@@ -66,9 +66,8 @@
     controller.completionWithItemsHandler = ^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError) {
     };
     if ([controller respondsToSelector:@selector(popoverPresentationController)] && controller.popoverPresentationController) {
-        controller.popoverPresentationController.sourceView = self.imageView;
-        CGFloat x = self.imageView.frame.size.width / 2.0;
-        controller.popoverPresentationController.sourceRect = CGRectMake(x, 0, 20.0, self.imageView.frame.size.height);
+        controller.popoverPresentationController.sourceView = sender;
+        controller.popoverPresentationController.sourceRect = CGRectZero;
         controller.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionDown | UIPopoverArrowDirectionUp;
     }
     
