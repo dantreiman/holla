@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "Chain.h"
-#import "Wallet.h"
 
 
 @interface AppDelegate ()
@@ -32,19 +31,6 @@
 //    }];
     
     
-    [Wallet fetchOrCreateWallet:^(Wallet * wallet) {
-        NSLog(@"%@", wallet);
-        
-        [wallet fetchAddresses:^(NSString * address) {
-            NSLog(@"Address = %@", address);
-            NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
-            [userDefaults setObject:address forKey:@"Address"];
-        } failure:^{}];
-        
-    } failure:^{
-
-    }];
-
     [self registerForNotifications];
     return YES;
 }

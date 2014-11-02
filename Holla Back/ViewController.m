@@ -10,10 +10,13 @@
 #import "NSURL+BitcoinURI.h"
 #import "UIImage+QRCodes.h"
 #import "NSURL+BitcoinURI.h"
+#import "Wallet.h"
+
 
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView * imageView;
+@property (strong, nonatomic) Wallet * wallet;
 
 @end
 
@@ -26,11 +29,33 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    __weak ViewController * weakSelf = self;
+    [Wallet fetchOrCreateWallet:^(Wallet * wallet) {
+        weakSelf.wallet = wallet;
+        [wallet fetchAddresses:^(NSString * address) {
+            NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+            [userDefaults setObject:address forKey:@"Address"];
+            [self generateQRCode];
+        } failure:^{}];
+        
+    } failure:^{
+        
+    }];
+}
+
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     
+}
+
+
+- (void) generateQRCode
+{
     // Create a QR code image
-    NSString * address = @"ADDRESS";
-    NSString * amount = @"0.03";
-    NSURL * url = [NSURL URLWithBitcoinAddress:address amount:amount message:nil];
+    NSString * address = self.wallet.address;
+    NSURL * url = [NSURL URLWithBitcoinAddress:address amount:nil message:nil];
     
     UIImage * qrCode = [UIImage imageWithCode:[url.absoluteString dataUsingEncoding:NSUTF8StringEncoding]];
     [UIPasteboard generalPasteboard].image = qrCode;
@@ -41,11 +66,12 @@
     NSString * urlString = [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
     NSURL * testURL = [NSURL URLWithString:urlString];
     NSString * testAddress = testURL.bitcoinAddress;
-    NSString * testAmount = testURL.bitcoinAmount;
+    NSDecimalNumber * testAmount = testURL.bitcoinAmount;
     NSString * testMessage = testURL.bitcoinMessage;
-
+    
     NSLog(@"%@, %@, %@", testAddress, testAmount, testMessage);
 }
+
 
 
 - (void)didReceiveMemoryWarning {
