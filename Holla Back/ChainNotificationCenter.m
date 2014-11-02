@@ -7,6 +7,7 @@
 //
 
 #import "ChainNotificationCenter.h"
+#import "NSDecimalNumber+Bitcoin.h"
 @import UIKit;
 
 @interface ChainNotificationCenter ()
@@ -52,10 +53,10 @@
     }
     
     NSDictionary *payload = json[@"payload"];
-    NSNumber *received = payload[@"received"];
+    NSDecimalNumber *received = payload[@"received"];
     NSNumber *confirmations = payload[@"confirmations"];
     if (received > 0 && confirmations == 0) {
-        NSNumber *amountInBTC = [NSNumber numberWithDouble:[received doubleValue] / 100000000.0f];
+        NSNumber *amountInBTC = [received convertSatoshiToBTC];
         UILocalNotification *localNotification = [[UILocalNotification alloc] init];
         localNotification.alertBody = [NSString stringWithFormat:@"You received %f BTC!", [amountInBTC doubleValue]];
         localNotification.soundName = UILocalNotificationDefaultSoundName;
