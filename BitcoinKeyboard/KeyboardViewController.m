@@ -7,6 +7,9 @@
 //
 
 #import "KeyboardViewController.h"
+#import "NSURL+BitcoinURI.h"
+#import "UIImage+QRCodes.h"
+
 
 @interface KeyboardViewController ()
 
@@ -66,7 +69,7 @@
 
 
 - (double) BTCAmount
-{
+{    
     // Increment by .002 (about $1 USD)
     float sliderValue = [self.amountSlider value];
     double BTC = sliderValue;
@@ -87,7 +90,13 @@
 
 - (IBAction) requestPayment:(id)sender
 {
-    [self.textDocumentProxy insertText:@"bitcoin:<ADDRESS GOES HERE> 22"];
+    NSString * address = @"ADDRESS";
+    NSString * amount = [NSString stringWithFormat:@"%.3f", [self BTCAmount]];
+    NSURL * url = [NSURL URLWithBitcoinAddress:address amount:amount message:nil];
+    
+    [self.textDocumentProxy insertText:url.absoluteString];
+    UIImage * qrCode = [UIImage imageWithCode:[url.absoluteString dataUsingEncoding:NSUTF8StringEncoding]];
+    [UIPasteboard generalPasteboard].image = qrCode;
 }
 
 
