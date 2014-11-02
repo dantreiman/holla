@@ -49,7 +49,7 @@
                    config: ZBAR_CFG_Y_DENSITY
                        to: 2];
     ZBarImage * image = [[ZBarImage alloc] initWithCGImage:self.CGImage];
-    NSInteger status = [scanner scanImage:image];
+    [scanner scanImage:image];
     ZBarSymbolSet * symbols = scanner.results;
     NSData * data = nil;
     for (ZBarSymbol * symbol in symbols) {

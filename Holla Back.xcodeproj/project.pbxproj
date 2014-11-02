@@ -36,6 +36,9 @@
 		D7738E921A05F152002685EE /* Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E6F1A05CF6C002685EE /* Keychain.m */; };
 		D7738E941A05F18B002685EE /* libPods-AFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7738E931A05F18B002685EE /* libPods-AFNetworking.a */; };
 		D7738E981A05F333002685EE /* PastingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E971A05F333002685EE /* PastingImageView.m */; };
+		D7738E9B1A0606A7002685EE /* NSDecimalNumber+Bitcoin.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E9A1A0606A7002685EE /* NSDecimalNumber+Bitcoin.m */; };
+		D7738E9C1A0606A7002685EE /* NSDecimalNumber+Bitcoin.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E9A1A0606A7002685EE /* NSDecimalNumber+Bitcoin.m */; };
+		D7738E9D1A0606A7002685EE /* NSDecimalNumber+Bitcoin.m in Sources */ = {isa = PBXBuildFile; fileRef = D7738E9A1A0606A7002685EE /* NSDecimalNumber+Bitcoin.m */; };
 		D79833901A05A11300810CE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D798338F1A05A11300810CE4 /* main.m */; };
 		D79833931A05A11300810CE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D79833921A05A11300810CE4 /* AppDelegate.m */; };
 		D79833961A05A11300810CE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D79833951A05A11300810CE4 /* ViewController.m */; };
@@ -108,6 +111,8 @@
 		D7738E931A05F18B002685EE /* libPods-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-AFNetworking.a"; sourceTree = "<group>"; };
 		D7738E961A05F333002685EE /* PastingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PastingImageView.h; sourceTree = "<group>"; };
 		D7738E971A05F333002685EE /* PastingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PastingImageView.m; sourceTree = "<group>"; };
+		D7738E991A0606A7002685EE /* NSDecimalNumber+Bitcoin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+Bitcoin.h"; sourceTree = "<group>"; };
+		D7738E9A1A0606A7002685EE /* NSDecimalNumber+Bitcoin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Bitcoin.m"; sourceTree = "<group>"; };
 		D798338A1A05A11300810CE4 /* Holla Back.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holla Back.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D798338E1A05A11300810CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D798338F1A05A11300810CE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -259,6 +264,8 @@
 				D79833951A05A11300810CE4 /* ViewController.m */,
 				D7738E961A05F333002685EE /* PastingImageView.h */,
 				D7738E971A05F333002685EE /* PastingImageView.m */,
+				D7738E991A0606A7002685EE /* NSDecimalNumber+Bitcoin.h */,
+				D7738E9A1A0606A7002685EE /* NSDecimalNumber+Bitcoin.m */,
 				D7738E441A05AAD9002685EE /* NotificationManager.h */,
 				D7738E451A05AAD9002685EE /* NotificationManager.m */,
 				D7738E671A05C5DE002685EE /* NSURL+BitcoinURI.h */,
@@ -452,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7738E9C1A0606A7002685EE /* NSDecimalNumber+Bitcoin.m in Sources */,
 				D7738E6A1A05C5E5002685EE /* NSURL+BitcoinURI.m in Sources */,
 				D7738E661A05C44A002685EE /* UIImage+ResizedImage.m in Sources */,
 				D7738E521A05ADE9002685EE /* KeyboardViewController.m in Sources */,
@@ -464,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7738E9D1A0606A7002685EE /* NSDecimalNumber+Bitcoin.m in Sources */,
 				D7738E911A05F147002685EE /* Wallet.m in Sources */,
 				D7738E8C1A05EDFD002685EE /* UIImage+QRCodes.m in Sources */,
 				D7738E8B1A05EDF6002685EE /* NSURL+BitcoinURI.m in Sources */,
@@ -483,6 +492,7 @@
 				D7738E981A05F333002685EE /* PastingImageView.m in Sources */,
 				D79833961A05A11300810CE4 /* ViewController.m in Sources */,
 				D79833931A05A11300810CE4 /* AppDelegate.m in Sources */,
+				D7738E9B1A0606A7002685EE /* NSDecimalNumber+Bitcoin.m in Sources */,
 				B987A4C71A05D05A0019E704 /* Wallet.m in Sources */,
 				D7738E691A05C5DE002685EE /* NSURL+BitcoinURI.m in Sources */,
 				D7738E461A05AADA002685EE /* NotificationManager.m in Sources */,

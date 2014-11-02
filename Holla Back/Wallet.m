@@ -115,7 +115,8 @@
                            if (addresses.count > 0) {
                                NSDictionary * addressJSON = addresses.firstObject;
                                self.address = addressJSON[@"address"];
-                               self.balance = [addressJSON[@"balance"] stringValue];
+                               NSDecimalNumber * balanceSatoshi = [NSDecimalNumber decimalNumberWithString:[addressJSON[@"balance"] stringValue]];
+                               self.balance = [balanceSatoshi convertSatoshiToBTC];
                                success(self.address);
                            }
                            else {
@@ -131,22 +132,25 @@
 
 
 - (void)sendPayment:(NSString *)address
-             amount:(int)amount
+             amount:(NSDecimalNumber *)amount
             success:(void (^)(NSString *))success
             failure:(void (^)(void))failure {
     
-    NSString *paymentURL = [NSString stringWithFormat:kBlockchainPaymentPath, self.guid];
-    NSMutableDictionary *params = [self baseParams];
+    NSString * paymentPath = [NSString stringWithFormat:kBlockchainPaymentPath, self.guid];
+    NSString * paymentURL = [kBlockchainBaseURL stringByAppendingString:paymentPath];
+    NSMutableDictionary * params = [self baseParams];
     [params setObject:address forKey:@"to"];
-    [params setObject:[NSString stringWithFormat:@"%i", amount] forKey:@"amount"];
+    [params setObject:amount.stringValue forKey:@"amount"];
     
     [[Wallet httpManager] POST:paymentURL
                     parameters:params
                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
                            NSDictionary *response = (NSDictionary *)responseObject;
                            NSString *message = response[@"message"];
+                           NSLog(@"Made a transaction: %@", response[@"tx_hash"]);
                            success(message);
                        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                           NSLog(@"Failed to post payment: %@", error.debugDescription);
                            failure();
                        }];
 }
