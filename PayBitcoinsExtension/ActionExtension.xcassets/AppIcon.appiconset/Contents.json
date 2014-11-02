@@ -38,13 +38,13 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Coin-Black-60.png",
+      "filename" : "Coin-Black.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Coin-Black-60-1.png",
+      "filename" : "Coin-Black@2x.png",
       "scale" : "3x"
     },
     {
@@ -86,7 +86,7 @@
     {
       "size" : "72x72",
       "idiom" : "ipad",
-      "filename" : "Coin-Black-72-1.png",
+      "filename" : "Coin-Black-72@2x.png",
       "scale" : "2x"
     },
     {
