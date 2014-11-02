@@ -7,7 +7,18 @@
 //
 
 #import "Blockchain.h"
+#import "AFHTTPRequestOperationManager.h"
 
 @implementation Blockchain
+
+NSString *const BlockchainBaseUrl = @"https://blockchain.info/";
+
+- (NSString *)createWallet {
+    return @"hello";
+}
+
+- (AFHTTPRequestOperationManager *)httpManager {
+    return [AFHTTPRequestOperationManager manager];
+}
 
 @end
