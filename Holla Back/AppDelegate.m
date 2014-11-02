@@ -44,8 +44,9 @@
         
         [wallet fetchAddresses:^(NSString * address) {
             NSLog(@"Address = %@", address);
-            NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
+            NSUserDefaults * userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.money2020hack.hollaback"];
             [userDefaults setObject:address forKey:@"Address"];
+            [userDefaults synchronize];
             ChainNotificationCenter *chainNotifier = [ChainNotificationCenter sharedCenter];
             chainNotifier.address = address;
             [chainNotifier open];

@@ -94,7 +94,8 @@
 
 - (IBAction) requestPayment:(id)sender
 {
-    NSString * address = [[NSUserDefaults standardUserDefaults] stringForKey:@"Address"];
+    NSUserDefaults * userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.money2020hack.hollaback"];
+    NSString * address = [userDefaults stringForKey:@"Address"];
     // NSString * address = self.wallet.address;
     if (!address) {
 #warning Replace this with fallback address for demo

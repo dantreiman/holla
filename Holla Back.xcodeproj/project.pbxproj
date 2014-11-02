@@ -116,6 +116,9 @@
 		D7738E971A05F333002685EE /* PastingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PastingImageView.m; sourceTree = "<group>"; };
 		D7738E991A0606A7002685EE /* NSDecimalNumber+Bitcoin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+Bitcoin.h"; sourceTree = "<group>"; };
 		D7738E9A1A0606A7002685EE /* NSDecimalNumber+Bitcoin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Bitcoin.m"; sourceTree = "<group>"; };
+		D7738E9E1A061A05002685EE /* Holla Back.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Holla Back.entitlements"; sourceTree = "<group>"; };
+		D7738E9F1A061A3E002685EE /* BitcoinKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BitcoinKeyboard.entitlements; sourceTree = "<group>"; };
+		D7738EA01A061A4C002685EE /* PayBitcoinsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PayBitcoinsExtension.entitlements; sourceTree = "<group>"; };
 		D798338A1A05A11300810CE4 /* Holla Back.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holla Back.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D798338E1A05A11300810CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D798338F1A05A11300810CE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -186,6 +189,7 @@
 		D7738E4D1A05ADE9002685EE /* BitcoinKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				D7738E9F1A061A3E002685EE /* BitcoinKeyboard.entitlements */,
 				D7738E501A05ADE9002685EE /* KeyboardViewController.h */,
 				D7738E511A05ADE9002685EE /* KeyboardViewController.m */,
 				D7738E5A1A05B22E002685EE /* KeyboardViewController.xib */,
@@ -216,6 +220,7 @@
 		D7738E7B1A05D78F002685EE /* PayBitcoinsExtension */ = {
 			isa = PBXGroup;
 			children = (
+				D7738EA01A061A4C002685EE /* PayBitcoinsExtension.entitlements */,
 				D7738E7E1A05D78F002685EE /* ActionViewController.h */,
 				D7738E7F1A05D78F002685EE /* ActionViewController.m */,
 				D7738E811A05D78F002685EE /* MainInterface.storyboard */,
@@ -257,6 +262,7 @@
 		D798338C1A05A11300810CE4 /* Holla Back */ = {
 			isa = PBXGroup;
 			children = (
+				D7738E9E1A061A05002685EE /* Holla Back.entitlements */,
 				B987A4C51A05D05A0019E704 /* Wallet.h */,
 				B987A4C61A05D05A0019E704 /* Wallet.m */,
 				D79833911A05A11300810CE4 /* AppDelegate.h */,
@@ -363,13 +369,29 @@
 				TargetAttributes = {
 					D7738E4B1A05ADE9002685EE = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = WCYVJZG889;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					D7738E791A05D78F002685EE = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = WCYVJZG889;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					D79833891A05A11300810CE4 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = WCYVJZG889;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -544,6 +566,9 @@
 		D7738E571A05ADE9002685EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BitcoinKeyboard/BitcoinKeyboard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -561,6 +586,7 @@
 				);
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -568,6 +594,9 @@
 		D7738E581A05ADE9002685EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BitcoinKeyboard/BitcoinKeyboard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -581,6 +610,7 @@
 				);
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -588,6 +618,9 @@
 		D7738E861A05D78F002685EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PayBitcoinsExtension/PayBitcoinsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -606,6 +639,7 @@
 				);
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -613,6 +647,9 @@
 		D7738E871A05D78F002685EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PayBitcoinsExtension/PayBitcoinsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -627,6 +664,7 @@
 				);
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -712,9 +750,13 @@
 			baseConfigurationReference = C9021190C8A429D50BA9CF3C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Holla Back/Holla Back.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Holla Back/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -724,9 +766,13 @@
 			baseConfigurationReference = C09DDCB69FE863F0BFE17A61 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Holla Back/Holla Back.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Holla Back/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
