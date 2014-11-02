@@ -16,7 +16,8 @@
 #define kBlockchainListAddressesPath @"merchant/%@/list"
 
 #define kBlockchainPaymentPath @"merchant/%@/payment"
-#define kBlockchainAPICode @"" // Free to use without a code, but subject to rate limit
+// Free to use without a code, but subject to rate limit
+#define kBlockchainAPICode @"3b69c012-a33a-41fe-b849-d7670fd8d3b3"
 
 #define kWalletGUIDDefaultKey @"holla:defaults:wallet_guid"
 
@@ -61,20 +62,21 @@
                          [defaults synchronize];
                          [keychain storePassword:password forAccount:walletGUID];
                          Wallet *wallet = [[Wallet alloc] initWithGUID:walletGUID andPassword:password];
+                         NSLog(@"Successfully created wallet: %@", wallet.guid);
                          success(wallet);
                      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                          NSLog(@"Error: %@", error.debugDescription);
                          
-#warning Fix this once we get a token with wallet create permission
-                         NSString * walletGUID = @"e28aa765-9c7c-4768-9e65-3b7380a7be0b";
-                         NSString * password = @"yiG6Cal3neK3ep8d";
-                         [defaults setValue:walletGUID forKey:kWalletGUIDDefaultKey];
-                         [defaults synchronize];
-                         [keychain storePassword:password forAccount:walletGUID];
-                         NSLog(@"Could not create wallet, initializing with dan's test wallet ID: %@", walletGUID);
-                         Wallet * wallet = [[Wallet alloc] initWithGUID:walletGUID andPassword:password];
-                         success(wallet);
-                         // failure();
+//#warning Fix this once we get a token with wallet create permission
+//                         NSString * walletGUID = @"e28aa765-9c7c-4768-9e65-3b7380a7be0b";
+//                         NSString * password = @"yiG6Cal3neK3ep8d";
+//                         [defaults setValue:walletGUID forKey:kWalletGUIDDefaultKey];
+//                         [defaults synchronize];
+//                         [keychain storePassword:password forAccount:walletGUID];
+//                         NSLog(@"Could not create wallet, initializing with dan's test wallet ID: %@", walletGUID);
+//                         Wallet * wallet = [[Wallet alloc] initWithGUID:walletGUID andPassword:password];
+//                         success(wallet);
+                         failure();
                      }];
 }
 

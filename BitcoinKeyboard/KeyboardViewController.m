@@ -45,11 +45,6 @@
     UINib * nib = [UINib nibWithNibName:@"KeyboardViewController" bundle:nil];
     [nib instantiateWithOwner:self options:nil];
     [self amountChanged:self.amountSlider];
-//    self.wallet = [Wallet fetchOrCreateWallet:^(Wallet *wallet) {
-//        self.wallet = wallet;
-//    } failure:^{
-//        
-//    }];
 }
 
 
