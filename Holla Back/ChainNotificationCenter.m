@@ -52,8 +52,6 @@
         return;
     }
     
-    NSLog(@"Received message: %@", json);
-    
     NSDictionary *payload = json[@"payload"];
     NSDictionary *transaction = payload[@"transaction"];
     NSArray *outputs = transaction[@"outputs"];
