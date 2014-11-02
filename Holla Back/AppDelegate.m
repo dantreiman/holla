@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "Chain.h"
+#import "Wallet.h"
+
 
 @interface AppDelegate ()
 
@@ -24,12 +26,23 @@
     
     
     // Sample Code
-    NSString * address = @"1A3tnautz38PZL15YWfxTeh8MtuMDhEPVB";
+//    NSString * address = @"1A3tnautz38PZL15YWfxTeh8MtuMDhEPVB";
+//    [chain getAddress:address completionHandler:^(NSDictionary *dict, NSError *error) {
+//        NSLog(@"data=%@ error=%@", dict, error);
+//    }];
     
-    [chain getAddress:address completionHandler:^(NSDictionary *dict, NSError *error) {
-        NSLog(@"data=%@ error=%@", dict, error);
+    
+    [Wallet fetchOrCreateWallet:^(Wallet * wallet) {
+        NSLog(@"%@", wallet);
+        
+        [wallet fetchAddresses:^(NSString * address) {
+            NSLog(@"Address = %@", address);
+        } failure:^{}];
+        
+    } failure:^{
+
     }];
-    
+
     [self registerForNotifications];
     return YES;
 }

@@ -82,6 +82,9 @@ static NSString * ServiceName = @"HollaBack";
 
 - (NSString *) retrievePasswordForAccount:(NSString *)account
 {
+    if (account == nil) {
+        return nil;
+    }
     // Set up a query dictionary with the base query attributes: item type (generic), username, and service
     
     NSDictionary * query = @{

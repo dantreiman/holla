@@ -15,8 +15,9 @@
 @property (nonatomic, strong) NSString *address;
 
 - (instancetype)initWithGUID:(NSString *)guid andPassword:(NSString *)password;
-- (void)generateAddress:(void (^)(NSString *))success failure:(void (^)(void))failure;
+- (void)generateAddress:(void (^)(NSString * address))success failure:(void (^)(void))failure;
+- (void)fetchAddresses:(void (^)(NSString * address))success failure:(void (^)(void))failure;
 - (void)sendPayment:(NSString *)address amount:(int)amount success:(void (^)(NSString *))success failure:(void (^)(void))failure;
-+ (instancetype)fetchOrCreateWallet:(void (^)(Wallet *))success failure:(void (^)(void))failure;
++ (void)fetchOrCreateWallet:(void (^)(Wallet *))success failure:(void (^)(void))failure;
 
 @end
