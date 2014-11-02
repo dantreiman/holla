@@ -25,12 +25,14 @@ PODS:
     - OpenSSL-Universal (= 1.0.1.h)
   - OpenSSL-Universal (1.0.1.h)
   - SocketRocket (0.3.1-beta2)
+  - ZBarSDK (1.3.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - Chain (= 2.0.0)
   - CoreBitcoin (from `https://raw.github.com/oleganza/CoreBitcoin/master/CoreBitcoin.podspec`)
   - SocketRocket
+  - ZBarSDK
 
 EXTERNAL SOURCES:
   CoreBitcoin:
@@ -42,5 +44,6 @@ SPEC CHECKSUMS:
   CoreBitcoin: 0957e9fa7a31867b91f459f943bd9144d397b624
   OpenSSL-Universal: 9c112508615ed33bb35f730eed820e93175a9dec
   SocketRocket: 79a68ae186063c65e1fe6f638b1ae2927aa5f304
+  ZBarSDK: 3ed560856963f765b66d834f464590bd6ba13b44
 
 COCOAPODS: 0.34.4
