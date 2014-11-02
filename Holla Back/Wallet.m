@@ -37,7 +37,7 @@
 }
 
 + (void)fetchOrCreateWallet:(void (^)(Wallet *))success failure:(void (^)(void))failure {
-    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    NSUserDefaults * defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.money2020hack.hollaback"];
     Keychain * keychain = [Keychain sharedKeychain];
     
     // Dan's iPhone address and password
