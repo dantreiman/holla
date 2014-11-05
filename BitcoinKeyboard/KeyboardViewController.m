@@ -95,7 +95,7 @@
 
 - (IBAction) requestPayment:(id)sender
 {
-    NSUserDefaults * userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.money2020hack.hollaback"];
+    NSUserDefaults * userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.money2020hack.moneyclip"];
     NSString * address = [userDefaults stringForKey:@"Address"];
     // NSString * address = self.wallet.address;
     if (!address) {

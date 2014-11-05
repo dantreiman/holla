@@ -1,6 +1,7 @@
 //
 //  AppDelegate.m
-//  Holla Back
+//  MoneyClip
+
 //
 //  Created by Dan Treiman on 11/1/14.
 //  Copyright (c) 2014 Only The Best. All rights reserved.
@@ -47,7 +48,7 @@
         
         [wallet fetchAddresses:^(NSString * address) {
             NSLog(@"Address = %@", address);
-            NSUserDefaults * userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.money2020hack.hollaback"];
+            NSUserDefaults * userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.money2020hack.moneyclip"];
             [userDefaults setObject:address forKey:@"Address"];
             [userDefaults synchronize];
             ChainNotificationCenter *chainNotifier = [ChainNotificationCenter sharedCenter];

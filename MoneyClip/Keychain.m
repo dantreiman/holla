@@ -1,6 +1,7 @@
 //
 //  Keychain.m
-//  Holla Back
+//  MoneyClip
+
 //
 //  Created by Dan Treiman on 11/1/14.
 //  Copyright (c) 2014 Dan Treiman. All rights reserved.
@@ -9,7 +10,7 @@
 #import "Keychain.h"
 
 
-static NSString * ServiceName = @"HollaBack";
+static NSString * ServiceName = @"MoneyClip";
 
 
 @implementation Keychain

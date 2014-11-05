@@ -1,6 +1,7 @@
 //
 //  Wallet.m
-//  Holla Back
+//  MoneyClip
+
 //
 //  Created by Julian Vergel de Dios on 11/1/14.
 //  Copyright (c) 2014 Only The Best. All rights reserved.
@@ -19,7 +20,7 @@
 // Free to use without a code, but subject to rate limit
 #define kBlockchainAPICode @"3b69c012-a33a-41fe-b849-d7670fd8d3b3"
 
-#define kWalletGUIDDefaultKey @"holla:defaults:wallet_guid"
+#define kWalletGUIDDefaultKey @"moneyclip:defaults:wallet_guid"
 
 
 @implementation Wallet
@@ -37,7 +38,7 @@
 }
 
 + (void)fetchOrCreateWallet:(void (^)(Wallet *))success failure:(void (^)(void))failure {
-    NSUserDefaults * defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.money2020hack.hollaback"];
+    NSUserDefaults * defaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.money2020hack.moneyclip"];
     Keychain * keychain = [Keychain sharedKeychain];
     
     

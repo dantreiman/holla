@@ -29,8 +29,10 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D79833A21A05A11300810CE4"
-               BuildableName = "Holla BackTests.xctest"
-               BlueprintName = "Holla BackTests"
+               BuildableName = "MoneyClip
+Tests.xctest"
+               BlueprintName = "MoneyClip
+Tests"
                ReferencedContainer = "container:MoneyClip.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,8 +49,10 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D79833A21A05A11300810CE4"
-               BuildableName = "Holla BackTests.xctest"
-               BlueprintName = "Holla BackTests"
+               BuildableName = "MoneyClip
+Tests.xctest"
+               BlueprintName = "MoneyClip
+Tests"
                ReferencedContainer = "container:MoneyClip.xcodeproj">
             </BuildableReference>
          </TestableReference>

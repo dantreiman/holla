@@ -360,7 +360,7 @@
 				D7738E841A05D78F002685EE /* PBXTargetDependency */,
 			);
 			name = MoneyClip;
-			productName = "Holla Back";
+			productName = "MoneyClip";
 			productReference = D798338A1A05A11300810CE4 /* MoneyClip.app */;
 			productType = "com.apple.product-type.application";
 		};
