@@ -123,7 +123,7 @@
 		D7738EA01A061A4C002685EE /* PayBitcoinsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PayBitcoinsExtension.entitlements; sourceTree = "<group>"; };
 		D7738EA11A06232D002685EE /* ActionExtension.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ActionExtension.xcassets; sourceTree = "<group>"; };
 		D7738EA31A062BBD002685EE /* KeyboardAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = KeyboardAssets.xcassets; sourceTree = "<group>"; };
-		D798338A1A05A11300810CE4 /* Holla Back.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Holla Back.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D798338A1A05A11300810CE4 /* MoneyClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D798338E1A05A11300810CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D798338F1A05A11300810CE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D79833911A05A11300810CE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -258,7 +258,7 @@
 		D798338B1A05A11300810CE4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D798338A1A05A11300810CE4 /* Holla Back.app */,
+				D798338A1A05A11300810CE4 /* MoneyClip.app */,
 				D7738E4C1A05ADE9002685EE /* BitcoinKeyboard.appex */,
 				D7738E7A1A05D78F002685EE /* PayBitcoinsExtension.appex */,
 			);
@@ -342,9 +342,9 @@
 			productReference = D7738E7A1A05D78F002685EE /* PayBitcoinsExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		D79833891A05A11300810CE4 /* Holla Back */ = {
+		D79833891A05A11300810CE4 /* MoneyClip */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D79833AD1A05A11300810CE4 /* Build configuration list for PBXNativeTarget "Holla Back" */;
+			buildConfigurationList = D79833AD1A05A11300810CE4 /* Build configuration list for PBXNativeTarget "MoneyClip" */;
 			buildPhases = (
 				B1F3A122311B425684B00DD4 /* Check Pods Manifest.lock */,
 				D79833861A05A11300810CE4 /* Sources */,
@@ -359,9 +359,9 @@
 				D7738E541A05ADE9002685EE /* PBXTargetDependency */,
 				D7738E841A05D78F002685EE /* PBXTargetDependency */,
 			);
-			name = "Holla Back";
+			name = MoneyClip;
 			productName = "Holla Back";
-			productReference = D798338A1A05A11300810CE4 /* Holla Back.app */;
+			productReference = D798338A1A05A11300810CE4 /* MoneyClip.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -405,7 +405,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D79833851A05A11300810CE4 /* Build configuration list for PBXProject "Holla Back" */;
+			buildConfigurationList = D79833851A05A11300810CE4 /* Build configuration list for PBXProject "MoneyClip" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -418,7 +418,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D79833891A05A11300810CE4 /* Holla Back */,
+				D79833891A05A11300810CE4 /* MoneyClip */,
 				D7738E4B1A05ADE9002685EE /* BitcoinKeyboard */,
 				D7738E791A05D78F002685EE /* PayBitcoinsExtension */,
 			);
@@ -765,7 +765,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Holla Back/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MoneyClip;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -781,7 +781,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Holla Back/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MoneyClip;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -808,7 +808,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D79833851A05A11300810CE4 /* Build configuration list for PBXProject "Holla Back" */ = {
+		D79833851A05A11300810CE4 /* Build configuration list for PBXProject "MoneyClip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D79833AB1A05A11300810CE4 /* Debug */,
@@ -817,7 +817,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D79833AD1A05A11300810CE4 /* Build configuration list for PBXNativeTarget "Holla Back" */ = {
+		D79833AD1A05A11300810CE4 /* Build configuration list for PBXNativeTarget "MoneyClip" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D79833AE1A05A11300810CE4 /* Debug */,

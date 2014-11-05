@@ -13,7 +13,7 @@
 	<key>CFBundleIcons~ipad</key>
 	<dict/>
 	<key>CFBundleIdentifier</key>
-	<string>co.money2020hack.hollaback.Holla-Back.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>co.money2020hack.moneyclip.Holla-Back.$(PRODUCT_NAME:rfc1034identifier)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

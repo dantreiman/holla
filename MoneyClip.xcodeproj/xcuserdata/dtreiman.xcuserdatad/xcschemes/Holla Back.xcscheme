@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D79833891A05A11300810CE4"
-               BuildableName = "Holla Back.app"
-               BlueprintName = "Holla Back"
-               ReferencedContainer = "container:Holla Back.xcodeproj">
+               BuildableName = "MoneyClip.app"
+               BlueprintName = "MoneyClip"
+               ReferencedContainer = "container:MoneyClip.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "D79833A21A05A11300810CE4"
                BuildableName = "Holla BackTests.xctest"
                BlueprintName = "Holla BackTests"
-               ReferencedContainer = "container:Holla Back.xcodeproj">
+               ReferencedContainer = "container:MoneyClip.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -49,7 +49,7 @@
                BlueprintIdentifier = "D79833A21A05A11300810CE4"
                BuildableName = "Holla BackTests.xctest"
                BlueprintName = "Holla BackTests"
-               ReferencedContainer = "container:Holla Back.xcodeproj">
+               ReferencedContainer = "container:MoneyClip.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D79833891A05A11300810CE4"
-            BuildableName = "Holla Back.app"
-            BlueprintName = "Holla Back"
-            ReferencedContainer = "container:Holla Back.xcodeproj">
+            BuildableName = "MoneyClip.app"
+            BlueprintName = "MoneyClip"
+            ReferencedContainer = "container:MoneyClip.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D79833891A05A11300810CE4"
-            BuildableName = "Holla Back.app"
-            BlueprintName = "Holla Back"
-            ReferencedContainer = "container:Holla Back.xcodeproj">
+            BuildableName = "MoneyClip.app"
+            BlueprintName = "MoneyClip"
+            ReferencedContainer = "container:MoneyClip.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D79833891A05A11300810CE4"
-            BuildableName = "Holla Back.app"
-            BlueprintName = "Holla Back"
-            ReferencedContainer = "container:Holla Back.xcodeproj">
+            BuildableName = "MoneyClip.app"
+            BlueprintName = "MoneyClip"
+            ReferencedContainer = "container:MoneyClip.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
