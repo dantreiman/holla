@@ -31,16 +31,9 @@ When requesting and sending through the facebook and twitter apps, the text fiel
 ### Keyboard
 
 To request money, first enable the keyboard extension using Settings.app:
-![](https://raw.github.com/dantreiman/holla/master/docs/kb_1_general.png =100x)
-![](https://raw.github.com/dantreiman/holla/master/docs/kb_2_keyboard.png =100x)
-![](https://raw.github.com/dantreiman/holla/master/docs/kb_3_keyboards.png =100x)
-![](https://raw.github.com/dantreiman/holla/master/docs/kb_4_bitcoinkeyboard.png =100x)
-![](https://raw.github.com/dantreiman/holla/master/docs/kb_5_allowfullaccess.png )
+![](https://raw.github.com/dantreiman/holla/master/docs/EnableKeyboard.gif)
 
 ### Share Extension
 
-![](https://raw.github.com/dantreiman/holla/master/docs/share_1_more.png)
-![](https://raw.github.com/dantreiman/holla/master/docs/share_2_enable.png)
-![](https://raw.github.com/dantreiman/holla/master/docs/share_3_send.png)
+![](https://raw.github.com/dantreiman/holla/master/docs/EnableShare.gif)
 
-g

@@ -42,18 +42,18 @@
     Keychain * keychain = [Keychain sharedKeychain];
     
     
-    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
-    // Dan's iPhone address and password
-        [defaults setObject:@"e28aa765-9c7c-4768-9e65-3b7380a7be0b" forKey:kWalletGUIDDefaultKey];
-        [defaults synchronize];
-        [keychain storePassword:@"yiG6Cal3neK3ep8d" forAccount:@"e28aa765-9c7c-4768-9e65-3b7380a7be0b"];
-    }
-    else {
-        // Julian's iPhone address and password
-        [defaults setObject:@"92c960a6-be8b-423c-acef-6ca3b1096579" forKey:kWalletGUIDDefaultKey];
-        [defaults synchronize];
-        [keychain storePassword:@"sVQZYdoZMsgxfJcJrDVvT7qbR" forAccount:@"92c960a6-be8b-423c-acef-6ca3b1096579"];
-    }
+//    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone) {
+//    // Dan's iPhone address and password
+//        [defaults setObject:@"e28aa765-9c7c-4768-9e65-3b7380a7be0b" forKey:kWalletGUIDDefaultKey];
+//        [defaults synchronize];
+//        [keychain storePassword:@"yiG6Cal3neK3ep8d" forAccount:@"e28aa765-9c7c-4768-9e65-3b7380a7be0b"];
+//    }
+//    else {
+//        // Julian's iPhone address and password
+//        [defaults setObject:@"92c960a6-be8b-423c-acef-6ca3b1096579" forKey:kWalletGUIDDefaultKey];
+//        [defaults synchronize];
+//        [keychain storePassword:@"sVQZYdoZMsgxfJcJrDVvT7qbR" forAccount:@"92c960a6-be8b-423c-acef-6ca3b1096579"];
+//    }
     
     NSString * walletGUID = [defaults stringForKey:kWalletGUIDDefaultKey];
     NSString * password = [keychain retrievePasswordForAccount:walletGUID];
