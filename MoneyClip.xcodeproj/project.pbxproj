@@ -118,7 +118,7 @@
 		D7738E971A05F333002685EE /* PastingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PastingImageView.m; sourceTree = "<group>"; };
 		D7738E991A0606A7002685EE /* NSDecimalNumber+Bitcoin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+Bitcoin.h"; sourceTree = "<group>"; };
 		D7738E9A1A0606A7002685EE /* NSDecimalNumber+Bitcoin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Bitcoin.m"; sourceTree = "<group>"; };
-		D7738E9E1A061A05002685EE /* Holla Back.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Holla Back.entitlements"; sourceTree = "<group>"; };
+		D7738E9E1A061A05002685EE /* MoneyClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MoneyClip.entitlements; sourceTree = "<group>"; };
 		D7738E9F1A061A3E002685EE /* BitcoinKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = BitcoinKeyboard.entitlements; sourceTree = "<group>"; };
 		D7738EA01A061A4C002685EE /* PayBitcoinsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PayBitcoinsExtension.entitlements; sourceTree = "<group>"; };
 		D7738EA11A06232D002685EE /* ActionExtension.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ActionExtension.xcassets; sourceTree = "<group>"; };
@@ -246,7 +246,7 @@
 		D79833811A05A11300810CE4 = {
 			isa = PBXGroup;
 			children = (
-				D798338C1A05A11300810CE4 /* Holla Back */,
+				D798338C1A05A11300810CE4 /* MoneyClip */,
 				D7738E4D1A05ADE9002685EE /* BitcoinKeyboard */,
 				D7738E7B1A05D78F002685EE /* PayBitcoinsExtension */,
 				D798338B1A05A11300810CE4 /* Products */,
@@ -265,10 +265,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D798338C1A05A11300810CE4 /* Holla Back */ = {
+		D798338C1A05A11300810CE4 /* MoneyClip */ = {
 			isa = PBXGroup;
 			children = (
-				D7738E9E1A061A05002685EE /* Holla Back.entitlements */,
+				D7738E9E1A061A05002685EE /* MoneyClip.entitlements */,
 				B987A4C51A05D05A0019E704 /* Wallet.h */,
 				B987A4C61A05D05A0019E704 /* Wallet.m */,
 				D79833911A05A11300810CE4 /* AppDelegate.h */,
@@ -293,7 +293,7 @@
 				B9DA4A841A05F96D0065CE99 /* ChainNotificationCenter.h */,
 				B9DA4A851A05F96D0065CE99 /* ChainNotificationCenter.m */,
 			);
-			path = "Holla Back";
+			path = MoneyClip;
 			sourceTree = "<group>";
 		};
 		D798338D1A05A11300810CE4 /* Supporting Files */ = {
@@ -760,10 +760,10 @@
 			baseConfigurationReference = C9021190C8A429D50BA9CF3C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Holla Back/Holla Back.entitlements";
+				CODE_SIGN_ENTITLEMENTS = MoneyClip/MoneyClip.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Holla Back/Info.plist";
+				INFOPLIST_FILE = MoneyClip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = MoneyClip;
 				PROVISIONING_PROFILE = "";
@@ -776,10 +776,10 @@
 			baseConfigurationReference = C09DDCB69FE863F0BFE17A61 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Holla Back/Holla Back.entitlements";
+				CODE_SIGN_ENTITLEMENTS = MoneyClip/MoneyClip.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Holla Back/Info.plist";
+				INFOPLIST_FILE = MoneyClip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = MoneyClip;
 				PROVISIONING_PROFILE = "";
