@@ -19,10 +19,15 @@ open MoneyClip.xcworkspace
 
 Build and run
 
+Once the app has been launched on the device, the keyboard and actions extension will be available.
 
 ## Testing
 
+![alt tag](https://raw.github.com/dantreiman/holla/master/docs/screenshot.png)
+
 ### Keyboard
+
+To request money, enable the 
 
 ### Share Extension
 
