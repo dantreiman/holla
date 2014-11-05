@@ -10,10 +10,10 @@ CocoaPods
 ## Building
 
 Install the latest cocoapods.  From the terminal:
-	gem install cocoapods
+    gem install cocoapods
 
 Install dependencies.  Inside the project directory, run:
-	pod install
+    pod install
 
 open MoneyClip.xcworkspace
 
